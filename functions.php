@@ -105,6 +105,8 @@ add_action( 'after_setup_theme', 'wpblank_theme_support' );
  * Include required files.
  */
 
+require get_template_directory() . '/inc/template-tags.php';
+
 // Custom script loader class.
 require get_template_directory() . '/classes/class-wpblank-script-loader.php';
 

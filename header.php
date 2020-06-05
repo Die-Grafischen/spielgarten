@@ -37,10 +37,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php wpblank_site_logo(); ?>
 
-			<!--<a href="<?php echo home_url();?>" id="logo">
-				<img src="<?php echo esc_url(get_field('logo', 'option')); ?>" alt="<?php echo bloginfo();?>" />
-			</a>-->
-
 			<?php if ( has_nav_menu( 'primary' ) ) { ?>
 				<div id="nav-toggle" class="" aria-expanded="false">
 		             <span></span>
