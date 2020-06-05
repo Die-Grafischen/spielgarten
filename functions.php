@@ -133,6 +133,9 @@ function wpblank_register_scripts() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
+	//Include WP jQuery
+    wp_enqueue_script('jquery');
+
 	wp_enqueue_script( 'wpblank-js', get_template_directory_uri() . '/assets/js/custom.js', array(), $theme_version, false );
 	wp_script_add_data( 'wpblank-js', 'async', true );
 
