@@ -1,4 +1,5 @@
 # WPBlank
 Blank WordPress Theme made with wpgulp
 
-*Support for ACF
+- Support for ACF
+- Encode emails
