@@ -230,3 +230,8 @@ function wpblank_block_editor_styles() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'wpblank_block_editor_styles', 1, 1 );
+
+
+// Allow the Editor Role to change Theme Settings and use Customizer
+$role_object = get_role( 'editor' );
+$role_object->add_cap( 'edit_theme_options' );
