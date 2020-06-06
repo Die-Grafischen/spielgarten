@@ -15,8 +15,8 @@
  *      8. InjectCSS instead of browser page reload.
  *      9. Generates .pot file for i18n and l10n.
  *
- * @author Ahmad Awais <https://github.com/ahmadawais>
- * @version 2.0.0
+ * @tutorial https://github.com/ahmadawais/WPGulp
+ * @author Ahmad Awais <https://twitter.com/MrAhmadAwais/>
  */
 
 /**
@@ -125,8 +125,8 @@ gulp.task( 'styles', () => {
 			})
 		)
 		.on( 'error', sass.logError )
-		.pipe( sourcemaps.write({ includeContent: false }) )
-		.pipe( sourcemaps.init({ loadMaps: true }) )
+		// .pipe( sourcemaps.write({ includeContent: false }) )
+		// .pipe( sourcemaps.init({ loadMaps: true }) )
 		.pipe( autoprefixer( config.BROWSERS_LIST ) )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
