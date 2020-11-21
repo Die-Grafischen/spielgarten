@@ -1,12 +1,12 @@
 <?php
 /**
- * WPBlank Theme functions and definitions
+ * blanky Theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage WPBlank
- * @since WPBlank Theme 1.0
+ * @subpackage blanky
+ * @since blanky Theme 1.0
  */
 
 /**
@@ -16,7 +16,7 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function wpblank_theme_support() {
+function blanky_theme_support() {
 
 
 	/*
@@ -77,10 +77,10 @@ function wpblank_theme_support() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on WPBlank Theme, use a find and replace
-	 * to change 'wpblank' to the name of your theme in all the template files.
+	 * If you're building a theme based on blanky Theme, use a find and replace
+	 * to change 'blanky' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'wpblank' );
+	load_theme_textdomain( 'blanky' );
 
 	// Add support for full and wide align images.
 	add_theme_support( 'align-wide' );
@@ -93,12 +93,12 @@ function wpblank_theme_support() {
 	 * Adds `async` and `defer` support for scripts registered or enqueued
 	 * by the theme.
 	 */
-	$loader = new wpblank_Script_Loader();
+	$loader = new blanky_Script_Loader();
 	add_filter( 'script_loader_tag', array( $loader, 'filter_script_loader_tag' ), 10, 2 );
 
 }
 
-add_action( 'after_setup_theme', 'wpblank_theme_support' );
+add_action( 'after_setup_theme', 'blanky_theme_support' );
 
 /**
  * REQUIRED FILES
@@ -108,56 +108,56 @@ add_action( 'after_setup_theme', 'wpblank_theme_support' );
 require get_template_directory() . '/inc/template-tags.php';
 
 // Custom script loader class.
-require get_template_directory() . '/classes/class-wpblank-script-loader.php';
+require get_template_directory() . '/classes/class-blanky-script-loader.php';
 
 
 /**
  * Register and Enqueue Styles.
  */
-function wpblank_register_styles() {
+function blanky_register_styles() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'wpblank-style', get_stylesheet_uri(), array(), $theme_version );
-	wp_style_add_data( 'wpblank-style', 'rtl', 'replace' );
+	wp_enqueue_style( 'blanky-style', get_stylesheet_uri() . '/assets/css/main.css', array(), $theme_version );
+	wp_style_add_data( 'blanky-style', 'rtl', 'replace' );
 
 
 }
 
-add_action( 'wp_enqueue_scripts', 'wpblank_register_styles' );
+add_action( 'wp_enqueue_scripts', 'blanky_register_styles' );
 
 /**
  * Register and Enqueue Scripts.
  */
-function wpblank_register_scripts() {
+function blanky_register_scripts() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	//Include WP jQuery
     wp_enqueue_script('jquery');
 
-	wp_enqueue_script( 'wpblank-js', get_template_directory_uri() . '/assets/js/custom.js', array(), $theme_version, false );
-	wp_script_add_data( 'wpblank-js', 'async', true );
+	wp_enqueue_script( 'blanky-js', get_template_directory_uri() . '/assets/js/custom.js', array(), $theme_version, false );
+	wp_script_add_data( 'blanky-js', 'async', true );
 
 }
 
-add_action( 'wp_enqueue_scripts', 'wpblank_register_scripts' );
+add_action( 'wp_enqueue_scripts', 'blanky_register_scripts' );
 
 
 /**
  * Register navigation menus uses wp_nav_menu in five places.
  */
-function wpblank_menus() {
+function blanky_menus() {
 
 	$locations = array(
-		'primary'  => __( 'Primary Menu', 'wpblank' ),
-		'secondary'   => __( 'Secondary Menu', 'wpblank' ),
+		'primary'  => __( 'Primary Menu', 'blanky' ),
+		'secondary'   => __( 'Secondary Menu', 'blanky' ),
 	);
 
 	register_nav_menus( $locations );
 }
 
-add_action( 'init', 'wpblank_menus' );
+add_action( 'init', 'blanky_menus' );
 
 /**
  * Get the information about the logo.
@@ -166,7 +166,7 @@ add_action( 'init', 'wpblank_menus' );
  *
  * @return string $html
  */
-function wpblank_get_custom_logo( $html ) {
+function blanky_get_custom_logo( $html ) {
 
 	$logo_id = get_theme_mod( 'custom_logo' );
 
@@ -214,22 +214,22 @@ function wpblank_get_custom_logo( $html ) {
 
 }
 
-add_filter( 'get_custom_logo', 'wpblank_get_custom_logo' );
+add_filter( 'get_custom_logo', 'blanky_get_custom_logo' );
 
 /**
  * Enqueue supplemental block editor styles.
  */
-function wpblank_block_editor_styles() {
+function blanky_block_editor_styles() {
 
 	// Enqueue the editor styles.
-	wp_enqueue_style( 'wpblank-block-editor-styles', get_theme_file_uri( '/assets/css/editor-style-block.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
-	wp_style_add_data( 'wpblank-block-editor-styles', 'rtl', 'replace' );
+	wp_enqueue_style( 'blanky-block-editor-styles', get_theme_file_uri( '/assets/css/editor-style-block.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
+	wp_style_add_data( 'blanky-block-editor-styles', 'rtl', 'replace' );
 
 	// Enqueue the editor script.
-	wp_enqueue_script( 'wpblank-block-editor-script', get_theme_file_uri( '/assets/js/editor-script-block.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'blanky-block-editor-script', get_theme_file_uri( '/assets/js/editor-script-block.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
 
-add_action( 'enqueue_block_editor_assets', 'wpblank_block_editor_styles', 1, 1 );
+add_action( 'enqueue_block_editor_assets', 'blanky_block_editor_styles', 1, 1 );
 
 
 // Allow the Editor Role to change Theme Settings and use Customizer
