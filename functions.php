@@ -235,3 +235,9 @@ add_action( 'enqueue_block_editor_assets', 'blanky_block_editor_styles', 1, 1 );
 // Allow the Editor Role to change Theme Settings and use Customizer
 $role_object = get_role( 'editor' );
 $role_object->add_cap( 'edit_theme_options' );
+
+
+// Advanced Custom Fields
+if (class_exists('ACF')) {
+	require get_template_directory() . '/inc/acf.php';
+}
