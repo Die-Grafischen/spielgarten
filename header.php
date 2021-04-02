@@ -1,6 +1,6 @@
 <?php
 /**
- * Header file for the WP Blank theme.
+ * Header file for the spielgarten theme.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
@@ -23,7 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 		<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon.ico" />
-		<link rel="profile" href="https://gmpg.org/xfn/11">
 
 		<?php wp_head(); ?>
 
@@ -35,7 +34,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="header-inner section-inner">
 
-			<?php wpblank_site_logo(); ?>
+			<?php $header = get_field('header','options');
+
+			$logo = isset($header['logo']) ? $header['logo'] : false;
+			$logoSVG = isset($header['logo_svg']) ? $header['logo_svg'] : false;
+			$altLogo = isset($header['alternatives_logo']) ? $header['alternatives_logo'] : false;
+			$altLogoSVG = isset($header['alternatives_logo_svg']) ? $header['alternatives_logo_svg'] : false;
+			$icons = isset($header['icons']) ? $header['icons'] : false;
+			$untertitel = isset($header['untertitel_rechts']) ? $header['untertitel_rechts'] : false;
+
+			?>
+
+			<a href="<?php echo home_url();?>" class="logo">
+				<?php if($logoSVG) {
+					echo wp_kses( $logoSVG, get_kses_extended_ruleset() );
+				} else if($logo) {
+					echo '<img src="'. esc_url($logo) .'" alt="" />';
+				} else {
+					echo get_bloginfo('name');
+				}?>
+			</a>
 
 			<?php if ( has_nav_menu( 'primary' ) ) { ?>
 				<div id="nav-toggle" class="" aria-expanded="false">

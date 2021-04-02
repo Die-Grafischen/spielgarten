@@ -1,5 +1,5 @@
-# Blanky
-Blank WordPress Theme made with wpgulp
+# Spielgarten
+Spielgarten WordPress Theme made with wpgulp
 
 - Support for ACF
 - Encode emails
