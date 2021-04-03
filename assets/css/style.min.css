@@ -42,8 +42,8 @@ td,th{padding:0}
 audio:not([controls]){display:none}
 details{display:block}
 input[type="number"]{width:auto}
-input[type="search"]{-webkit-appearance:textfield}
-input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+input[type='search']{-webkit-appearance:textfield}
+input[type='search']::-webkit-search-cancel-button,input[type='search']::-webkit-search-decoration{-webkit-appearance:none}
 main{display:block}
 summary{display:block}
 pre{overflow:auto}
@@ -115,8 +115,11 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 #wp-calendar tfoot #next{font-size:10px;text-transform:uppercase;text-align:right}
 #wp-calendar tfoot #prev{font-size:10px;text-transform:uppercase;padding-top:10px}
 .size-auto,.size-full,.size-large,.size-medium,.size-thumbnail{max-width:100%;height:auto}
+header#site-header .header-inner{position:relative}
+header#site-header .header-inner .logo{position:absolute;left:0;top:0}
 body{opacity:1}
 .wrap{display:table;width:100%;height:100%;font-size:5vh;padding:3vh;background:#ed4846;color:#fff}
+.wrapper,header#site-header,footer#site-footer{width:100%;max-width:1205px;margin:0 auto;padding:30px}
 .content{display:table-cell;width:100%;vertical-align:middle;margin:0 auto;text-align:center}
 .content h1,.content p{font-family:Lato;font-weight:100}
 .content h1{text-transform:uppercase}

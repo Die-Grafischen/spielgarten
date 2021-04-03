@@ -15,6 +15,13 @@ body {
 	color: $w;
 }
 
+.wrapper {
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: $gap;
+}
+
 .content{
 	display: table-cell;
 	width: 100%;

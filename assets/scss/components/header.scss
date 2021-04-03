@@ -1,0 +1,20 @@
+/**
+ * Header SCSS
+ */
+
+ header#site-header {
+
+    @extend .wrapper;
+
+    .header-inner {
+
+        position: relative;
+
+        .logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+ }
