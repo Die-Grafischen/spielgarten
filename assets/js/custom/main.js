@@ -23,15 +23,10 @@ jQuery(document).ready(function ($) {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
 			},
-
-			// And if we need scrollbar
-			scrollbar: {
-				el: ".swiper-scrollbar",
-			},
 		});
 	}
 
-	// slider homepage
+	// slider on homepage
 	if ($(".projekte-wrapper").length) {
 		const swiper = new Swiper(".projekt-slider", {
 			// Optional parameters
