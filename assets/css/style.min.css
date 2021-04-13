@@ -244,6 +244,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .team-members .team-wrapper .team-member.active-member{cursor:default;width:100%}
 .team-members .team-wrapper .team-member.active-member .team-member-feat{padding-top:calc(50% - 8px)}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info{width:calc(50% - 8px);left:auto;right:0;display:block;text-align:left;background-color:#f1f4eb;padding:15px 25px 0}
+.team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .team-fotos{display:block}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .feat-img{width:calc(50% - 8px);cursor:pointer}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .feat-img img{display:block}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .text{display:block}
