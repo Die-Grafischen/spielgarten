@@ -573,7 +573,7 @@ button.swiper-pagination-bullet { border: none; margin: 0; padding: 0; -webkit-b
 
 .swiper-link { display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; }
 
-.swiper-text { color: #ffffff; padding: 40px; position: absolute; left: 0; bottom: 0; width: 100%; fotn-size: 28px; }
+.swiper-text { color: #ffffff; padding: 40px; position: absolute; left: 0; bottom: 0; width: 100%; font-size: 28px; }
 
 .swiper-text p { margin-top: 22px; margin-bottom: 0; }
 

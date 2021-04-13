@@ -236,7 +236,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .swiper-container-flip .swiper-slide-active,.swiper-container-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}
 .swiper-container-flip .swiper-slide-shadow-top,.swiper-container-flip .swiper-slide-shadow-bottom,.swiper-container-flip .swiper-slide-shadow-left,.swiper-container-flip .swiper-slide-shadow-right{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}
 .swiper-link{display:block;width:100%;height:100%;position:absolute;left:0;top:0}
-.swiper-text{color:#fff;padding:40px;position:absolute;left:0;bottom:0;width:100%;fotn-size:28px}
+.swiper-text{color:#fff;padding:40px;position:absolute;left:0;bottom:0;width:100%;font-size:28px}
 .swiper-text p{margin-top:22px;margin-bottom:0}
 .team-members .team-wrapper{max-width:calc(100% + 16px) !important;width:calc(100% + 16px);margin-left:-8px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .team-members .team-wrapper .sizer{width:33.33%}
