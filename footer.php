@@ -18,29 +18,50 @@
 
 ?>
 </div><!-- .wrapper -->
-		<footer id="site-footer" role="contentinfo">
+<footer id="site-footer" role="contentinfo">
 
-			<div class="section-inner">
+	<div class="section-inner">
 
-				<div class="footer-credits">
+		<?php $footer = get_field('footer', 'options');
+		$widgetLinks = !empty($footer['text-widget-links']) ? $footer['text-widget-links'] : false;
+		$widgetMitte = !empty($footer['text-widget-mitte']) ? $footer['text-widget-mitte'] : false;
+		$widgetRechts = !empty($footer['text-widget-rechts']) ? $footer['text-widget-rechts'] : false;
+		?>
 
-					<p class="footer-copyright">&copy;
-						<?php
+		<?php if($widgetLinks) {
+			echo '<div class="text-widget twl">'. wp_kses_post($widgetLinks) .'</div>';
+		}
+
+		if($widgetMitte) {
+			echo '<div class="text-widget twm">'. wp_kses_post($widgetMitte) .'</div>';
+		}
+
+		if($widgetRechts) {
+			echo '<div class="text-widget twr">'. wp_kses_post($widgetRechts) .'</div>';
+		}
+
+		 ?>
+
+		<div class="footer-credits">
+
+			<p class="footer-copyright">&copy;
+				<?php
 						echo date_i18n(
 							/* translators: Copyright date format, see https://www.php.net/date */
-							_x( 'Y', 'copyright date format', 'wpblank' )
+							_x( 'Y', 'Copyright', 'wpblank' )
 						);
 						?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-					</p><!-- .footer-copyright -->
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+			</p><!-- .footer-copyright -->
 
-				</div><!-- .footer-credits -->
+		</div><!-- .footer-credits -->
 
-			</div><!-- .section-inner -->
+	</div><!-- .section-inner -->
 
-		</footer><!-- #site-footer -->
+</footer><!-- #site-footer -->
 
-		<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 
-	</body>
+</body>
+
 </html>

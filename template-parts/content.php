@@ -14,5 +14,8 @@
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-	<?php the_content(); ?>
+	<?php get_template_part( 'template-parts/sidebar', get_post_type() ); ?>
+	<div id="the-content">
+		<?php the_content(); ?>
+	</div>
 </article><!-- .post -->

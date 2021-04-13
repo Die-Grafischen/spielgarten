@@ -22,61 +22,6 @@ function my_acf_init() {
 	if( function_exists('acf_register_block') ) {
 
 		acf_register_block(array(
-			'name'				=> 'Slider',
-			'title'				=> __('Slider'),
-			'description'		=> __('Slider'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'custom',
-			'icon'				=> 'images-alt2',
-			'keywords'			=> array( 'slider'),
-			'mode' => 'edit'
-		));
-
-		acf_register_block(array(
-			'name'				=> 'Hero',
-			'title'				=> __('Hero'),
-			'description'		=> __('Hero block with heading, buttons and slider.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'custom',
-			'icon'				=> 'align-right',
-			'keywords'			=> array( 'hero', 'buttons', 'slider'),
-			'mode' => 'edit'
-		));
-
-		acf_register_block(array(
-			'name'				=> 'About',
-			'title'				=> __('About'),
-			'description'		=> __('About block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'custom',
-			'icon'				=> 'editor-table',
-			'keywords'			=> array( 'About' ),
-			'mode' => 'edit'
-		));
-
-		acf_register_block(array(
-			'name'				=> 'Video',
-			'title'				=> __('Video'),
-			'description'		=> __('Video block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'custom',
-			'icon'				=> 'video-alt',
-			'keywords'			=> array( 'Video' ),
-			'mode' => 'edit'
-		));
-
-		acf_register_block(array(
-			'name'				=> 'Presentation',
-			'title'				=> __('Presentation'),
-			'description'		=> __('Presentation block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'custom',
-			'icon'				=> 'format-gallery',
-			'keywords'			=> array( 'Presentation' ),
-			'mode' => 'edit'
-		));
-
-		acf_register_block(array(
 			'name'				=> 'slider',
 			'title'				=> __('Slider'),
 			'description'		=> __('Image slider with text block'),
@@ -102,7 +47,7 @@ function my_acf_block_render_callback( $block ) {
 }
 
 
-// Disabel all gutenberg blocks exept these here
+// Disable all gutenberg blocks exept these here
 //add_filter( 'allowed_block_types', 'misha_allowed_block_types', 10, 2 );
 
 function misha_allowed_block_types( $allowed_blocks, $post ) {
@@ -116,11 +61,6 @@ function misha_allowed_block_types( $allowed_blocks, $post ) {
 		'core/table',
 		'core/shortcode',
 		'core/group',
-		'acf/slider',
-		'acf/hero',
-		'acf/about',
-		'acf/video',
-		'acf/presentation',
 		'acf/slider'
 	);
 
@@ -168,6 +108,24 @@ function my_acf_json_load_point( $paths ) {
     return $paths;
 
 }
+
+function enqueue_if_block_is_present(){
+	if(is_singular()){
+		//We only want the script if it's a singular page
+		$id = get_the_ID();
+		$theme_version = wp_get_theme()->get( 'Version' );
+		//load only if the block is on the page
+		if(has_block('acf/slider',$id) || is_page_template('template-projekte.php')){
+
+			wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js',
+			array(), $theme_version,
+			false );
+			// wp_script_add_data( 'swiper', 'async', true );
+
+		}
+	}
+}
+add_action('wp_enqueue_scripts','enqueue_if_block_is_present');
 
 
 ?>

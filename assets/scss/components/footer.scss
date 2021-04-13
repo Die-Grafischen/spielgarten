@@ -2,6 +2,43 @@
  * footer SCSS
  */
 
- footer#site-footer {
-     @extend .wrapper;
- }
+footer#site-footer {
+	width: 100%;
+	background-color: $alphaGreen;
+	padding: 0 !important;
+
+	.section-inner {
+		@extend .wrapper;
+		display: flex;
+		flex-wrap: wrap;
+
+		h2,
+		h3,
+		h4,
+		h5 {
+			margin-top: 10px;
+		}
+
+		.text-widget {
+			width: 33.33%;
+
+			&.twl {
+				padding-right: 8%;
+			}
+
+			&.twl + .twm {
+				margin-left: 0 !important;
+			}
+
+			&.twm {
+				margin: 0 auto;
+				padding: 0 5% 0 10%;
+			}
+
+			&.twr {
+				margin-left: auto;
+				padding-left: 10%;
+			}
+		}
+	}
+}

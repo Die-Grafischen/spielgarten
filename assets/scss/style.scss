@@ -1,20 +1,23 @@
 // Mixins & Variables.
-@import 'partials/mixins';
-@import 'partials/variables';
+@import "partials/mixins";
+@import "partials/variables";
 
 // Normalize & Santize.
-@import 'vendor/normalize';
-@import 'vendor/sanitize';
+@import "vendor/normalize";
+@import "vendor/sanitize";
 
 // Structure.
-@import 'partials/structure';
+@import "partials/structure";
 
 // WPCore.
-@import 'partials/wpcore';
+@import "partials/wpcore";
 
 // Components
-@import 'components/header';
-@import 'components/footer';
+@import "components/header";
+@import "components/footer";
+@import "components/swiper";
+@import "components/team";
+@import "components/projekte";
 
 // Base.
-@import 'partials/base';
+@import "partials/base";

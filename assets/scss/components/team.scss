@@ -1,0 +1,148 @@
+.team-members {
+	.team-wrapper {
+		max-width: calc(100% + 16px) !important;
+		width: calc(100% + 16px);
+		margin-left: -8px;
+		display: flex;
+		flex-wrap: wrap;
+
+		.sizer {
+			width: 33.33%;
+		}
+		.team-member {
+			width: 33.33%;
+			padding: 8px;
+			cursor: pointer;
+
+			&.active-member {
+				cursor: default;
+				width: 100%;
+
+				.team-member-feat {
+					padding-top: calc(50% - 8px);
+
+					.team-member-info {
+						width: calc(50% - 8px);
+						left: auto;
+						right: 0;
+						display: block;
+						text-align: left;
+						background-color: $alphaGreen;
+						padding: 15px 25px 0;
+					}
+
+					.feat-img {
+						width: calc(50% - 8px);
+						cursor: pointer;
+
+						img {
+							display: block;
+						}
+					}
+
+					.text {
+						display: block;
+					}
+
+					.name {
+						text-align: left;
+					}
+				}
+			}
+
+			.team-member-media {
+				position: relative;
+
+				.team-member-info {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 2;
+					text-align: center;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					flex-wrap: wrap;
+					background-color: rgba($color: #fff, $alpha: 0.65);
+
+					.team-fotos {
+						width: 100%;
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						display: none;
+
+						.member-img {
+							width: 50%;
+							padding-top: calc(50% - 8px);
+							background-repeat: no-repeat;
+							background-size: cover;
+							background-position: center center;
+							float: left;
+
+							&:nth-child(1) {
+								border-top: 16px solid $white;
+								border-right: 8px solid $white;
+							}
+
+							&:nth-child(2) {
+								border-top: 16px solid $white;
+								border-left: 8px solid $white;
+							}
+
+							img {
+								object-fit: cover;
+								object-position: top center;
+								width: 100%;
+								height: 100%;
+								display: none;
+							}
+						}
+					}
+				}
+
+				.feat-img {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					left: 0;
+					top: 0;
+					z-index: 1;
+					background-size: 100% auto;
+					background-repeat: no-repeat;
+				}
+
+				.member-img img {
+					object-fit: cover;
+					object-position: top center;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.name {
+				text-align: center;
+				width: 100%;
+				text-transform: uppercase;
+			}
+
+			.position {
+				width: 100%;
+				padding: 0 8px;
+				text-transform: uppercase;
+			}
+
+			.text {
+				display: none;
+				margin-top: 4px;
+			}
+			.team-member-feat {
+				width: 100%;
+				padding-top: 100%;
+			}
+		}
+	}
+}

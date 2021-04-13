@@ -4,15 +4,9 @@
 
 body {
 	opacity: 1;
-}
-.wrap{
-	display: table;
-	width: 100%;
-	height: 100%;
-	font-size: 5vh;
-	padding: 3vh;
-	background: $color--primary;
-	color: $w;
+	& > .wrapper {
+		padding-top: 0;
+	}
 }
 
 .wrapper {
@@ -22,33 +16,127 @@ body {
 	padding: $gap;
 }
 
-.content{
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 18px;
+}
+
+p {
+	margin-bottom: 22px;
+}
+
+li.current_page_item a {
+	color: $green;
+}
+
+.content {
 	display: table-cell;
 	width: 100%;
 	vertical-align: middle;
 	margin: 0 auto;
 	text-align: center;
 
-	h1, p{
+	h1,
+	p {
 		font-family: Lato;
 		font-weight: 100;
-		@include r(240)  { font-weight: 100; }
-		@include r(320)  { font-weight: 100; }
-		@include r(480)  { font-weight: 100; }
-		@include r(768)  { font-weight: 100; }
-		@include r(1024) { font-weight: 100; }
-		@include r(1280) { font-weight: 100; }
-
+		@include r(240) {
+			font-weight: 100;
+		}
+		@include r(320) {
+			font-weight: 100;
+		}
+		@include r(480) {
+			font-weight: 100;
+		}
+		@include r(768) {
+			font-weight: 100;
+		}
+		@include r(1024) {
+			font-weight: 100;
+		}
+		@include r(1280) {
+			font-weight: 100;
+		}
 	}
 
-	h1{
+	h1 {
 		text-transform: uppercase;
-		@include r(240)  { text-transform: uppercase; }
-    	@include r(320)  { text-transform: uppercase; }
-    	@include r(480)  { text-transform: uppercase; }
-    	@include r(768)  { text-transform: uppercase; }
-    	@include r(1024) { text-transform: uppercase; }
-    	@include r(1280) { text-transform: uppercase; }
-
+		@include r(240) {
+			text-transform: uppercase;
+		}
+		@include r(320) {
+			text-transform: uppercase;
+		}
+		@include r(480) {
+			text-transform: uppercase;
+		}
+		@include r(768) {
+			text-transform: uppercase;
+		}
+		@include r(1024) {
+			text-transform: uppercase;
+		}
+		@include r(1280) {
+			text-transform: uppercase;
+		}
 	}
+}
+
+.wp-block-column:not(:first-child) {
+	margin-left: 95px;
+}
+
+aside#site-sidebar {
+	width: 230px;
+	width: 20%;
+	padding-right: 22px;
+	float: left;
+	padding-top: $gap/2;
+	ul {
+		list-style: none;
+		text-transform: uppercase;
+		li {
+			padding: 8px 0;
+			border-bottom: 1px solid rgba($color: #444842, $alpha: 0.3);
+			&:first-child {
+				border-top: 1px solid rgba($color: #444842, $alpha: 0.3);
+
+				a:hover {
+					color: $green;
+				}
+			}
+		}
+	}
+}
+
+body:not(.home) {
+	#the-content {
+		width: 80%;
+		padding-left: 22px;
+		padding-top: 13px;
+		float: left;
+
+		&.team-members {
+			max-width: 100%;
+		}
+
+		> * {
+			max-width: 710px;
+		}
+
+		.wp-block-gallery {
+			max-width: 100%;
+			margin-top: $gap;
+		}
+	}
+}
+
+#site-content,
+article {
+	display: inline-block;
+	width: 100%;
 }
