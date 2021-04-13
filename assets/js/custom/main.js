@@ -89,9 +89,8 @@ jQuery(document).ready(function ($) {
 		});
 	}
 
-	if (".team-wrapper".length) {
+	if ($(".team-wrapper").length) {
 		const isoTeam = $(".team-wrapper");
-
 		isoTeam.isotope({
 			// options
 			itemSelector: ".team-member",

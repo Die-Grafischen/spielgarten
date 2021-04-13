@@ -80,7 +80,7 @@ jQuery(document).ready(function ($) {
     });
   }
 
-  if (".team-wrapper".length) {
+  if ($(".team-wrapper").length) {
     var isoTeam = $(".team-wrapper");
     isoTeam.isotope({
       // options

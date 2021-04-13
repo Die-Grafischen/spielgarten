@@ -184,7 +184,7 @@ footer#site-footer .section-inner .text-widget.twr{margin-left:auto;padding-left
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{-webkit-transform:scale(0.33);transform:scale(0.33)}
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{-webkit-transform:scale(0.66);transform:scale(0.66)}
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{-webkit-transform:scale(0.33);transform:scale(0.33)}
-.swiper-pagination-bullet{width:15px;height:15px;display:inline-block;border-radius:50%;background:#000;opacity:.4}
+.swiper-pagination-bullet{width:15px;height:15px;display:inline-block;border-radius:50%;background:#fff;opacity:.4}
 button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:none;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}
 .swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}
 .swiper-pagination-bullet-active{opacity:1;background:var(--swiper-pagination-color,var(--swiper-theme-color))}
