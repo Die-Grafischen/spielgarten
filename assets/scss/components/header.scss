@@ -6,6 +6,7 @@ header#site-header {
 	@extend .wrapper;
 	padding: 0 !important;
 	color: $green;
+	font-family: "GravurLLWeb-CondRegular", serif;
 
 	.header-inner {
 		height: 160px;

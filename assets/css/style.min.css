@@ -76,6 +76,14 @@ textarea{resize:vertical}
 ::selection{background-color:#b3d4fc;text-shadow:none}
 @font-face{font-family:"Lato";font-style:normal;font-weight:400;src:local(""),url("../fonts/lato/lato-v17-latin-regular.woff2") format("woff2"),url("../fonts/lato/lato-v17-latin-regular.woff") format("woff")}
 @font-face{font-family:"Lato";font-style:normal;font-weight:900;src:local(""),url("../fonts/lato/lato-v17-latin-900.woff2") format("woff2"),url("../fonts/lato/lato-v17-latin-900.woff") format("woff")}
+@font-face{font-family:"GravurLLWeb-CondLight";src:url("../fonts/gravur/GravurLLWeb-CondLight.woff") format("woff")}
+@font-face{font-family:"GravurLLWeb-CondLight";src:url("../fonts/gravur/GravurLLWeb-CondLight.woff2") format("woff2")}
+@font-face{font-family:"GravurLLWeb-CondRegular";src:url("../fonts/gravur/GravurLLWeb-CondRegular.woff") format("woff")}
+@font-face{font-family:"GravurLLWeb-CondRegular";src:url("../fonts/gravur/GravurLLWeb-CondRegular.woff2") format("woff2")}
+@font-face{font-family:"GravurLLSub-CondLightSubset";src:url("../fonts/gravur/GravurLLSub-CondLightSubset.woff2") format("woff2")}
+@font-face{font-family:"GravurLLSub-CondLightSubset";src:url("../fonts/gravur/GravurLLSub-CondLightSubset.woff") format("woff")}
+@font-face{font-family:"GravurLLSub-CondRegularSubset";src:url("../fonts/gravur/GravurLLSub-CondRegularSubset.woff2") format("woff2")}
+@font-face{font-family:"GravurLLSub-CondRegularSubset";src:url("../fonts/gravur/GravurLLSub-CondRegularSubset.woff") format("woff")}
 *,*:after,*:before{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 html{height:100%;min-height:100%}
 body{font:400 16px/1.4 sans-serif;color:#000;margin:0;height:100%;min-height:100%}
@@ -118,7 +126,7 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 #wp-calendar tfoot #prev{font-size:10px;text-transform:uppercase;padding-top:10px}
 .size-auto,.size-full,.size-large,.size-medium,.size-thumbnail{max-width:100%;height:auto}
 .wp-block-columns{margin:40px 0}
-header#site-header{padding:0 !important;color:#437a29}
+header#site-header{padding:0 !important;color:#437a29;font-family:"GravurLLWeb-CondRegular",serif}
 header#site-header .header-inner{height:160px;padding:30px 40px 15px;position:relative}
 header#site-header .header-inner .logo{position:absolute;left:40px;top:30px}
 header#site-header .header-inner nav{display:inline-block;position:absolute;left:40px;bottom:15px;font-size:28px}
@@ -238,7 +246,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .swiper-container-flip .swiper-slide-active,.swiper-container-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}
 .swiper-container-flip .swiper-slide-shadow-top,.swiper-container-flip .swiper-slide-shadow-bottom,.swiper-container-flip .swiper-slide-shadow-left,.swiper-container-flip .swiper-slide-shadow-right{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}
 .swiper-link{display:block;width:100%;height:100%;position:absolute;left:0;top:0}
-.swiper-text{color:#fff;padding:40px;position:absolute;left:0;bottom:30px;width:100%;font-size:28px;line-height:1.2}
+.swiper-text{font-family:"GravurLLWeb-CondRegular",serif;color:#fff;padding:40px;position:absolute;left:0;bottom:30px;width:100%;font-size:28px;line-height:1.2}
 .swiper-text p{margin-top:22px;margin-bottom:0}
 .team-members .team-wrapper{max-width:calc(100% + 16px) !important;width:calc(100% + 16px);margin-left:-8px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .team-members .team-wrapper .sizer{width:33.33%}
@@ -308,7 +316,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 body{font-family:"Lato",sans-serif;opacity:1}
 body>.wrapper,body>header#site-header,footer#site-footer body>.section-inner{padding-top:0}
 .wrapper,header#site-header,footer#site-footer .section-inner{width:100%;max-width:1280px;margin:0 auto;padding:40px}
-h2,h3,h4,h5,h6{font-size:18px}
+h2,h3,h4,h5,h6{font-size:20px;font-family:"GravurLLWeb-CondRegular",serif}
 p{margin-bottom:22px}
 li.current_page_item a{color:#437a29}
 .content{display:table-cell;width:100%;vertical-align:middle;margin:0 auto;text-align:center}

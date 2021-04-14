@@ -23,6 +23,49 @@
 			url("../fonts/lato/lato-v17-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+@font-face {
+	font-family: "GravurLLWeb-CondLight";
+	src: url("../fonts/gravur/GravurLLWeb-CondLight.woff") format("woff");
+}
+
+@font-face {
+	font-family: "GravurLLWeb-CondLight";
+	src: url("../fonts/gravur/GravurLLWeb-CondLight.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "GravurLLWeb-CondRegular";
+	src: url("../fonts/gravur/GravurLLWeb-CondRegular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "GravurLLWeb-CondRegular";
+	src: url("../fonts/gravur/GravurLLWeb-CondRegular.woff2") format("woff2");
+}
+
+/* subset */
+
+@font-face {
+	font-family: "GravurLLSub-CondLightSubset";
+	src: url("../fonts/gravur/GravurLLSub-CondLightSubset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "GravurLLSub-CondLightSubset";
+	src: url("../fonts/gravur/GravurLLSub-CondLightSubset.woff") format("woff");
+}
+
+@font-face {
+	font-family: "GravurLLSub-CondRegularSubset";
+	src: url("../fonts/gravur/GravurLLSub-CondRegularSubset.woff2")
+		format("woff2");
+}
+
+@font-face {
+	font-family: "GravurLLSub-CondRegularSubset";
+	src: url("../fonts/gravur/GravurLLSub-CondRegularSubset.woff") format("woff");
+}
+
 /* global box-sizing */
 *,
 *:after,
