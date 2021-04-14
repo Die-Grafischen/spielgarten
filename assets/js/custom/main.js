@@ -118,6 +118,7 @@ jQuery(document).ready(function ($) {
 
 		$(".team-wrapper").on("click", ".team-member", function () {
 			$(".team-members > img").fadeOut();
+
 			if ($(this).hasClass("active-member")) {
 				$(".team-member.active-member").removeClass("active-member");
 			} else {
