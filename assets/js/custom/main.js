@@ -66,7 +66,6 @@ jQuery(document).ready(function ($) {
 		$("#projekte-view").on("click", function () {
 			isoProjekte.isotope("destroy");
 			$(this).parent().parent().toggleClass("text-view");
-			isoProjekte.isotope("reloadItems");
 		});
 
 		$("#projekte-dropdown-cat").on("click", function () {
