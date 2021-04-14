@@ -41,18 +41,27 @@ jQuery(document).ready(function ($) {
 			},
 		});
 
-		// $(".projekt-slider").on("click", function () {
-		// 	if ($(".single-projekt-view").length) {
-		// 		isoProjekte.isotope({
-		// 			itemSelector: ".projekt",
-		// 		});
-		// 	} else {
-		// 		isoProjekte.isotope("destroy");
-		// 	}
-		// 	$(".active-projekt").removeClass("active-projekt");
-		// 	$(this).parent().toggleClass("active-projekt");
-		// 	$(".projekte-wrapper").toggleClass("single-projekt-view");
-		// });
+		$(".projekt-slide").on("click", function () {
+			const projekt = $(this);
+
+			if ($(".active-projekt").length) {
+			} else {
+				isoProjekte.isotope("destroy");
+				projekt.parent().parent().parent().toggleClass("active-projekt");
+				$(".projekte").toggleClass("single-projekt-view");
+
+				projekt
+					.parent()
+					.parent()
+					.parent()
+					.find(".projekt-foto")
+					.each(function () {
+						const bgr = "url(" + $(this).data("foto") + ")";
+						$(this).css("background-image", bgr);
+						console.log(bgr);
+					});
+			}
+		});
 
 		$("#projekte-view").on("click", function () {
 			isoProjekte.isotope("destroy");

@@ -37,20 +37,22 @@ jQuery(document).ready(function ($) {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
       }
-    }); // $(".projekt-slider").on("click", function () {
-    // 	if ($(".single-projekt-view").length) {
-    // 		isoProjekte.isotope({
-    // 			itemSelector: ".projekt",
-    // 		});
-    // 	} else {
-    // 		isoProjekte.isotope("destroy");
-    // 	}
-    // 	$(".active-projekt").removeClass("active-projekt");
-    // 	$(this).parent().toggleClass("active-projekt");
-    // 	$(".projekte-wrapper").toggleClass("single-projekt-view");
-    // });
+    });
 
+    $(".projekt-slide").on("click", function () {
+      var projekt = $(this);
 
+      if ($(".active-projekt").length) {} else {
+        isoProjekte.isotope("destroy");
+        projekt.parent().parent().parent().toggleClass("active-projekt");
+        $(".projekte").toggleClass("single-projekt-view");
+        projekt.parent().parent().parent().find(".projekt-foto").each(function () {
+          var bgr = "url(" + $(this).data("foto") + ")";
+          $(this).css("background-image", bgr);
+          console.log(bgr);
+        });
+      }
+    });
     $("#projekte-view").on("click", function () {
       isoProjekte.isotope("destroy");
       $(this).parent().parent().toggleClass("text-view");
