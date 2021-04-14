@@ -106,6 +106,12 @@ jQuery(document).ready(function ($) {
 		$("#projekte-cats").on("click", function () {
 			$(".projekte-nav").removeClass("cat-view");
 		});
+
+		$(".close-projekt").on("click", function () {
+			console.log("test");
+			$(".single-projekt-view").removeClass("single-projekt-view");
+			$(".projekt.active-projekt").removeClass("active-projekt");
+		});
 	}
 
 	if ($(".team-wrapper").length) {
