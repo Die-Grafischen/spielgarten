@@ -15,14 +15,20 @@ get_header();
 ?>
 
 <main id="site-content" role="main">
-	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+	<article <?php post_class(); ?> id="post-<?php the_ID(); $id = get_the_ID();?>">
 
 		<?php get_template_part( 'template-parts/sidebar', get_post_type() ); ?>
 
 		<div id="the-content" class="team-members">
+
+			<?php if ( has_post_thumbnail(get_the_ID()) ) {
+                the_post_thumbnail(get_the_ID());
+            }?>
+
 			<div class="team-wrapper">
+
 				<?php
-                $args = array(
+                    $args = array(
                     'post_type'      => 'team',
                     'posts_per_page' => '-1',
                     'orderby'        => 'menu_order',
@@ -34,7 +40,7 @@ get_header();
                 // The Loop
                 if ( $the_query->have_posts() ) :
                     while ( $the_query->have_posts() ) : $the_query->the_post();
-
+                    
                     get_template_part( 'template-parts/team', get_post_type() );
 
                     endwhile;

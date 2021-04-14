@@ -17,11 +17,11 @@ get_header();
 <main id="site-content" role="main">
 	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-		<div id="the-content" class="projekte">
+		<div id="the-content" class="projekte grid-view">
 
 			<div class="projekte-nav">
 				<svg xmlns="http://www.w3.org/2000/svg" width="19.382" height="18.429" viewBox="0 0 19.382 18.429"
-					id="projekte-view">
+					id="grid-view" class="active-icon">
 					<g id="views" transform="translate(-3.368 -2.763)">
 						<path id="Path_309" data-name="Path 309"
 							d="M10.51,4.24V9.494H4.845V4.24H10.51m.54-1.477H4.305a.937.937,0,0,0-.937.938v6.334a.937.937,0,0,0,.937.937H11.05a.937.937,0,0,0,.937-.937V3.7a.937.937,0,0,0-.937-.938Z"
@@ -39,7 +39,7 @@ get_header();
 				</svg>
 
 				<svg xmlns="http://www.w3.org/2000/svg" width="16.823" height="17.954" viewBox="0 0 16.823 17.954"
-					id="projekte-dropdown-cat">
+					id="text-view">
 					<g id="cats" transform="translate(-63.9 -14)">
 						<g id="Group_87" data-name="Group 87" transform="translate(63.9 14)">
 							<path id="Path_317" data-name="Path 317"
@@ -65,7 +65,7 @@ get_header();
 				</svg>
 
 				<svg xmlns="http://www.w3.org/2000/svg" width="17.542" height="18.43" viewBox="0 0 17.542 18.43"
-					id="projekte-filter-icon">
+					id="projekte-filter">
 					<g id="filter" transform="translate(-112.601 -11.8)">
 						<path id="Path_333" data-name="Path 333"
 							d="M123.829,30.23h-4.912V24.263l-5.808-8.8a2.447,2.447,0,0,1-.263-2.531,2.463,2.463,0,0,1,2.3-1.129H127.6a2.463,2.463,0,0,1,2.3,1.129,2.464,2.464,0,0,1-.276,2.552l-5.8,8.781Zm-3.435-1.477h1.957V23.861l6.011-9.148c.284-.45.37-.842.244-1.071s-.5-.365-1.01-.365H115.149c-.506,0-.884.136-1.01.365a1.143,1.143,0,0,0,.231,1.05l6.023,9.169Z" />

@@ -27,6 +27,9 @@ jQuery(document).ready(function ($) {
 
 
   if ($(".projekte-wrapper").length) {
+    var catName;
+    var isoProjekte = $(".projekte-wrapper");
+
     var _swiper = new Swiper(".projekt-slider", {
       // Optional parameters
       direction: "horizontal",
@@ -39,6 +42,10 @@ jQuery(document).ready(function ($) {
       }
     });
 
+    isoProjekte.isotope({
+      // options
+      itemSelector: ".projekt"
+    });
     $(".projekt-slide").on("click", function () {
       var projekt = $(this);
 
@@ -53,28 +60,35 @@ jQuery(document).ready(function ($) {
         });
       }
     });
-    $("#projekte-view").on("click", function () {
-      isoProjekte.isotope("destroy");
-      $(this).parent().parent().toggleClass("text-view");
+    $("#grid-view").on("click", function () {
+      $(".active-icon").removeClass("active-icon");
+      $(this).addClass("active-icon");
+      $(".projekte").removeClass("text-view").addClass("grid-view");
+      isoProjekte.isotope("layout");
     });
-    $("#projekte-dropdown-cat").on("click", function () {
-      $(this).parent().toggleClass("cat-view");
+    $("#text-view").on("click", function () {
+      $(".active-icon").removeClass("active-icon");
+      $(this).addClass("active-icon");
+      $(".projekte").removeClass("grid-view").addClass("text-view");
+      isoProjekte.isotope("layout");
     });
-    $("#projekte-cats").on("click", function () {
-      $("#projekte-dropdown-cat").trigger("click");
+    $("#projekte-filter").on("click", function () {
+      $(".projekte-nav").addClass("cat-view");
     });
     $("#projekte-cats ul li").on("click", function () {
       var cat = $(this).text().toLowerCase();
-      var catName = cat.replace(/\s/g, "");
-      $("#projekte-current-cat").text($(this).text());
+      catName = cat.replace(/\s/g, "");
+
+      if (!(catName === "alleprojekte")) {
+        $("#projekte-current-cat").addClass("active-filter").text($(this).text());
+      }
+
       isoProjekte.isotope({
         filter: "." + catName
       });
     });
-    var isoProjekte = $(".projekte-wrapper");
-    isoProjekte.isotope({
-      // options
-      itemSelector: ".projekt"
+    $("#projekte-cats").on("click", function () {
+      $(".projekte-nav").removeClass("cat-view");
     });
   }
 
@@ -86,6 +100,8 @@ jQuery(document).ready(function ($) {
       layoutMode: "packery"
     });
     $(".team-wrapper").on("click", ".team-member", function () {
+      $(".team-members > img").fadeOut();
+
       if ($(this).hasClass("active-member")) {
         $(".team-member.active-member").removeClass("active-member");
       } else {

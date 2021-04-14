@@ -248,19 +248,21 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .swiper-link{display:block;width:100%;height:100%;position:absolute;left:0;top:0}
 .swiper-text{font-family:"GravurLLWeb-CondRegular",serif;color:#fff;padding:40px;position:absolute;left:0;bottom:30px;width:100%;font-size:28px;line-height:1.2}
 .swiper-text p{margin-top:22px;margin-bottom:0}
+.team-members>img{width:100% !important;max-width:100% !important;margin-bottom:8px}
 .team-members .team-wrapper{max-width:calc(100% + 16px) !important;width:calc(100% + 16px);margin-left:-8px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .team-members .team-wrapper .sizer{width:33.33%}
 .team-members .team-wrapper .team-member{width:33.33%;padding:8px;cursor:pointer}
+.team-members .team-wrapper .team-member:hover .team-member-media .team-member-info{opacity:1}
 .team-members .team-wrapper .team-member.active-member{cursor:default;width:100%}
 .team-members .team-wrapper .team-member.active-member .team-member-feat{padding-top:calc(50% - 8px)}
-.team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info{width:calc(50% - 8px);left:auto;right:0;display:block;text-align:left;background-color:#f1f4eb;padding:15px 25px 0}
+.team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info{width:calc(50% - 8px);left:auto;right:0;display:block;text-align:left;background-color:#f1f4eb;padding:15px 25px 0;opacity:1}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .team-fotos{display:block}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .feat-img{width:calc(50% - 8px);cursor:pointer}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .feat-img img{display:block}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .text{display:block}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .name{text-align:left}
 .team-members .team-wrapper .team-member .team-member-media{position:relative}
-.team-members .team-wrapper .team-member .team-member-media .team-member-info{position:absolute;left:0;top:0;width:100%;height:100%;z-index:2;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:rgba(255,255,255,0.65)}
+.team-members .team-wrapper .team-member .team-member-media .team-member-info{position:absolute;left:0;top:0;width:100%;height:100%;z-index:2;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:rgba(255,255,255,0.65);opacity:0;-webkit-transition:all .3s linear;transition:all .3s linear}
 .team-members .team-wrapper .team-member .team-member-media .team-member-info .team-fotos{width:100%;position:absolute;left:0;bottom:0;display:none}
 .team-members .team-wrapper .team-member .team-member-media .team-member-info .team-fotos .member-img{width:50%;padding-top:calc(50% - 8px);background-repeat:no-repeat;background-size:cover;background-position:center center;float:left}
 .team-members .team-wrapper .team-member .team-member-media .team-member-info .team-fotos .member-img:nth-child(1){border-top:16px solid #fff;border-right:8px solid #fff}
@@ -277,12 +279,12 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:calc(25% - 16px);height:190px;position:relative;float:left}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{display:block;width:calc(75% - 16px);float:right}
 .projekte .projekte-nav{width:100%;padding:30px 0 8px;position:relative}
-.projekte .projekte-nav>svg{margin-left:8px;cursor:pointer}
+.projekte .projekte-nav>svg{margin-left:8px;cursor:pointer;height:18px;width:auto}
 .projekte .projekte-nav>svg path{fill:#437a29}
 .projekte .projekte-nav>svg:hover path{fill:#000}
-.projekte .projekte-nav>svg#projekte-filter-icon{cursor:default}
-.projekte .projekte-nav>svg#projekte-filter-icon:hover path{fill:#437a29}
+.projekte .projekte-nav>svg.active-icon path{fill:#000}
 .projekte .projekte-nav.cat-view #projekte-cats{display:block}
+.projekte .projekte-nav #projekte-current-cat{background-color:#f1f4eb;padding:1px 6px 3px;margin:0 0 -2px 3px}
 .projekte .projekte-nav #projekte-cats{position:absolute;top:24px;left:65px;padding:8px 16px;z-index:2;background-color:#f1f4eb;display:none}
 .projekte .projekte-nav #projekte-cats ul{list-style:none;padding-right:16px}
 .projekte .projekte-nav #projekte-cats ul li{padding-bottom:4px;color:#437a29;cursor:pointer}

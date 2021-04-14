@@ -32,6 +32,8 @@
 		> svg {
 			margin-left: 8px;
 			cursor: pointer;
+			height: 18px;
+			width: auto;
 			path {
 				fill: $green;
 			}
@@ -39,11 +41,8 @@
 				fill: $black;
 			}
 
-			&#projekte-filter-icon {
-				cursor: default;
-				&:hover path {
-					fill: $green;
-				}
+			&.active-icon path {
+				fill: $black;
 			}
 		}
 
@@ -51,6 +50,12 @@
 			#projekte-cats {
 				display: block;
 			}
+		}
+
+		#projekte-current-cat {
+			background-color: $alphaGreen;
+			padding: 1px 6px 3px;
+			margin: 0 0 -2px 3px;
 		}
 
 		#projekte-cats {

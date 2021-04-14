@@ -1,4 +1,9 @@
 .team-members {
+	& > img {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin-bottom: 8px;
+	}
 	.team-wrapper {
 		max-width: calc(100% + 16px) !important;
 		width: calc(100% + 16px);
@@ -13,6 +18,10 @@
 			width: 33.33%;
 			padding: 8px;
 			cursor: pointer;
+
+			&:hover .team-member-media .team-member-info {
+				opacity: 1;
+			}
 
 			&.active-member {
 				cursor: default;
@@ -29,6 +38,7 @@
 						text-align: left;
 						background-color: $alphaGreen;
 						padding: 15px 25px 0;
+						opacity: 1;
 
 						.team-fotos {
 							display: block;
@@ -71,6 +81,8 @@
 					align-items: center;
 					flex-wrap: wrap;
 					background-color: rgba($color: #fff, $alpha: 0.65);
+					opacity: 0;
+					transition: all 0.3s linear;
 
 					.team-fotos {
 						width: 100%;
