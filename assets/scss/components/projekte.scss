@@ -26,8 +26,11 @@
 
 	.projekte-nav {
 		width: 100%;
-		padding: 30px 0 8px;
+		padding: 30px 0 4px;
 		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
 
 		> svg {
 			margin-left: 8px;
@@ -54,11 +57,12 @@
 
 		#projekte-current-cat {
 			background-color: $alphaGreen;
-			// padding: 1px 6px 3px;
-			padding: 0 5px;
+			padding: 0 5px 2px;
 			height: 24px;
-			line-height: 21px;
-			margin: 0 0 -2px 3px;
+			line-height: 1px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
 		}
 
 		#projekte-cats {

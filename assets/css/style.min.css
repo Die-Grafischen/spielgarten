@@ -278,13 +278,13 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte.text-view .projekte-wrapper .projekt{width:100%;padding-top:0;padding-bottom:16px}
 .projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:calc(25% - 16px);height:190px;position:relative;float:left}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{display:block;width:calc(75% - 16px);float:right}
-.projekte .projekte-nav{width:100%;padding:30px 0 8px;position:relative}
+.projekte .projekte-nav{width:100%;padding:30px 0 4px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .projekte .projekte-nav>svg{margin-left:8px;cursor:pointer;height:18px;width:auto}
 .projekte .projekte-nav>svg path{fill:#437a29}
 .projekte .projekte-nav>svg:hover path{fill:#000}
 .projekte .projekte-nav>svg.active-icon path{fill:#000}
 .projekte .projekte-nav.cat-view #projekte-cats{display:block}
-.projekte .projekte-nav #projekte-current-cat{background-color:#f1f4eb;padding:0 5px;height:24px;line-height:21px;margin:0 0 -2px 3px}
+.projekte .projekte-nav #projekte-current-cat{background-color:#f1f4eb;padding:0 5px 2px;height:24px;line-height:1px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .projekte .projekte-nav #projekte-cats{position:absolute;top:24px;left:65px;padding:8px 16px;z-index:2;background-color:#f1f4eb;display:none}
 .projekte .projekte-nav #projekte-cats ul{list-style:none;padding-right:16px}
 .projekte .projekte-nav #projekte-cats ul li{padding-bottom:4px;color:#437a29;cursor:pointer}
