@@ -250,10 +250,12 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .team-members .team-wrapper{max-width:calc(100% + 16px) !important;width:calc(100% + 16px);margin-left:-8px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .team-members .team-wrapper .sizer{width:33.33%}
 .team-members .team-wrapper .team-member{width:33.33%;padding:8px;cursor:pointer}
+.team-members .team-wrapper .team-member .close{display:none}
 .team-members .team-wrapper .team-member:hover .team-member-media .team-member-info{opacity:1}
 .team-members .team-wrapper .team-member.active-member{cursor:default;width:100%}
 .team-members .team-wrapper .team-member.active-member .team-member-feat{padding-top:calc(50% - 8px)}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info{width:calc(50% - 8px);left:auto;right:0;display:block;text-align:left;background-color:#f1f4eb;padding:15px 25px 0;opacity:1}
+.team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .close{display:block;top:15px;right:20px}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .team-fotos{display:block}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .feat-img{width:calc(50% - 8px);cursor:pointer}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .feat-img img{display:block}
@@ -290,15 +292,15 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-nav #projekte-cats ul li:hover{color:#000}
 .projekte .projekte-nav #projekte-cats .close-icon{position:absolute;right:12px;top:13px;cursor:pointer}
 .projekte .projekte-nav #projekte-cats .close-icon:hover path{stroke:#000}
-.projekte .close-projekt{display:none}
+.projekte .close{display:none}
 .projekte.single-projekt-view{width:calc(100% + 24px) !important;max-width:calc(100% + 24px) !important;margin-left:-12px}
 .projekte.single-projekt-view .projekt:not(.active-projekt){display:none}
 .projekte.single-projekt-view .projekte-wrapper{margin-top:32px}
 .projekte.single-projekt-view .projekte-nav{display:none}
-.projekte.single-projekt-view .close-projekt{width:24px;height:24px;background:url("../images/mobile-nav-close.svg") center center/contain no-repeat;position:absolute;right:25px;top:25px;cursor:pointer;display:block}
 .projekte .projekte-wrapper{max-width:100% !important;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .projekte .projekte-wrapper .projekt{width:25%;padding-top:206px;position:relative;cursor:pointer}
 .projekte .projekte-wrapper .projekt.active-projekt{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-top:8px;cursor:default}
+.projekte .projekte-wrapper .projekt.active-projekt .close{display:block}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-slider{width:calc(50% - 24px);position:relative;top:0;left:0;height:447px;margin:0 12px 12px}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-slider .swiper-wrapper,.projekte .projekte-wrapper .projekt.active-projekt .projekt-slider .swiper-btn{display:none}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-meta{display:inline-block;width:calc(50% - 24px);margin:0 12px 12px;background-color:#f1f4eb;padding:15px 25px}
@@ -316,6 +318,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-wrapper .projekt .projekt-foto{display:none}
 .projekte #projekte-current-cat{margin-left:8px;display:inline-block;opacity:0}
 .projekte #projekte-current-cat.active-filter{opacity:1}
+.close{width:24px;height:24px;background:url("../images/mobile-nav-close.svg") center center/contain no-repeat;position:absolute;right:25px;top:25px;cursor:pointer;display:block}
 body{font-family:lato,sans-serif;opacity:1}
 body>.wrapper,body>header#site-header,footer#site-footer body>.section-inner{padding-top:0}
 .wrapper,header#site-header,footer#site-footer .section-inner{width:100%;max-width:1280px;margin:0 auto;padding:40px}

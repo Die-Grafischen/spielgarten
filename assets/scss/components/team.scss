@@ -20,6 +20,10 @@
 			padding: 8px;
 			cursor: pointer;
 
+			.close {
+				display: none;
+			}
+
 			&:hover .team-member-media .team-member-info {
 				opacity: 1;
 			}
@@ -40,6 +44,12 @@
 						background-color: $alphaGreen;
 						padding: 15px 25px 0;
 						opacity: 1;
+
+						.close {
+							display: block;
+							top: 15px;
+							right: 20px;
+						}
 
 						.team-fotos {
 							display: block;

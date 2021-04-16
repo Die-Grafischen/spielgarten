@@ -47,7 +47,7 @@
 
         echo '<div class="projekt-meta">
 
-            <div class="close-projekt"></div>
+            <div class="close"></div>
 
             <h2 class="name">'. get_the_title() .'</h2>';
 

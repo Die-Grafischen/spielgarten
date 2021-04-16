@@ -97,6 +97,8 @@ jQuery(document).ready(function ($) {
 				$("#projekte-current-cat")
 					.addClass("active-filter")
 					.text($(this).text());
+			} else {
+				$("#projekte-current-cat").removeClass("active-filter").text("");
 			}
 			isoProjekte.isotope({
 				filter: "." + catName,
@@ -107,8 +109,7 @@ jQuery(document).ready(function ($) {
 			$(".projekte-nav").removeClass("cat-view");
 		});
 
-		$(".close-projekt").on("click", function () {
-			console.log("test");
+		$(".projekte .close").on("click", function () {
 			$(".single-projekt-view").removeClass("single-projekt-view");
 			$(".projekt.active-projekt").removeClass("active-projekt");
 		});
@@ -127,6 +128,7 @@ jQuery(document).ready(function ($) {
 
 			if ($(this).hasClass("active-member")) {
 				$(".team-member.active-member").removeClass("active-member");
+				$(".team-members > img").fadeIn();
 			} else {
 				$(".team-member.active-member").removeClass("active-member");
 				$(this).addClass("active-member");

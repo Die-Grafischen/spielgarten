@@ -31,6 +31,8 @@
 
             <div class="team-member-info">
 
+                <div class="close"></div>
+
                 <h2 class="name">'. get_the_title() .'</h2>';
 
                 if($position){

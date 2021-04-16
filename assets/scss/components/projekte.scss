@@ -99,7 +99,7 @@
 		}
 	}
 
-	.close-projekt {
+	.close {
 		display: none;
 	}
 
@@ -118,18 +118,6 @@
 
 		.projekte-nav {
 			display: none;
-		}
-
-		.close-projekt {
-			width: 24px;
-			height: 24px;
-			background: url("../images/mobile-nav-close.svg") center center / contain
-				no-repeat;
-			position: absolute;
-			right: 25px;
-			top: 25px;
-			cursor: pointer;
-			display: block;
 		}
 	}
 
@@ -150,6 +138,10 @@
 				flex-wrap: wrap;
 				padding-top: 8px;
 				cursor: default;
+
+				.close {
+					display: block;
+				}
 
 				.projekt-slider {
 					width: calc(50% - 24px);
@@ -248,4 +240,16 @@
 			opacity: 1;
 		}
 	}
+}
+
+.close {
+	width: 24px;
+	height: 24px;
+	background: url("../images/mobile-nav-close.svg") center center / contain
+		no-repeat;
+	position: absolute;
+	right: 25px;
+	top: 25px;
+	cursor: pointer;
+	display: block;
 }
