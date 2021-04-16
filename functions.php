@@ -155,6 +155,7 @@ function blanky_menus() {
 	$locations = array(
 		'primary'  => __( 'Primary Menu', 'blanky' ),
 		'secondary'   => __( 'Secondary Menu', 'blanky' ),
+		'mobile-menu' => __( 'Mobile Menu', 'blanky' ),
 	);
 
 	register_nav_menus( $locations );

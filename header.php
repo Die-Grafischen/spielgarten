@@ -61,6 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'wpblank' ); ?>" role="navigation">
 				<?php wp_nav_menu( array( 'container' => false, 'theme_location' => 'primary',  ) ); ?>
+				<?php wp_nav_menu( array( 'container' => false, 'theme_location' => 'mobile-menu',  ) ); ?>
 			</nav>
 			<?php } ?>
 
