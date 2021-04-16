@@ -247,7 +247,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .swiper-text{font-family:"GravurLLWeb-CondRegular",serif;color:#fff;padding:40px;position:absolute;left:0;bottom:30px;width:100%;font-size:28px;line-height:1.2}
 .swiper-text p{margin-top:22px;margin-bottom:0}
 .team-members>img{width:100% !important;max-width:100% !important;margin-bottom:8px}
-.team-members .team-wrapper{max-width:calc(100% + 16px) !important;width:calc(100% + 16px);margin-left:-8px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.team-members .team-wrapper{max-width:calc(100% + 16px) !important;width:calc(100% + 16px);margin-left:-8px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-transition:all .3s linear;transition:all .3s linear}
 .team-members .team-wrapper .sizer{width:33.33%}
 .team-members .team-wrapper .team-member{width:33.33%;padding:8px;cursor:pointer}
 .team-members .team-wrapper .team-member .close{display:none}
@@ -284,7 +284,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-nav>svg:hover path{fill:#000}
 .projekte .projekte-nav>svg.active-icon path{fill:#000}
 .projekte .projekte-nav.cat-view #projekte-cats{display:block}
-.projekte .projekte-nav #projekte-current-cat{background-color:#f1f4eb;padding:1px 6px 3px;margin:0 0 -2px 3px}
+.projekte .projekte-nav #projekte-current-cat{background-color:#f1f4eb;padding:0 5px;height:24px;line-height:21px;margin:0 0 -2px 3px}
 .projekte .projekte-nav #projekte-cats{position:absolute;top:24px;left:65px;padding:8px 16px;z-index:2;background-color:#f1f4eb;display:none}
 .projekte .projekte-nav #projekte-cats ul{list-style:none;padding-right:16px}
 .projekte .projekte-nav #projekte-cats ul li{padding-bottom:4px;color:#437a29;cursor:pointer}
@@ -322,6 +322,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 body{font-family:lato,sans-serif;opacity:1}
 body>.wrapper,body>header#site-header,footer#site-footer body>.section-inner{padding-top:0}
 .wrapper,header#site-header,footer#site-footer .section-inner{width:100%;max-width:1280px;margin:0 auto;padding:40px}
+header+div{min-height:50vh}
 h2,h3,h4,h5,h6{font-size:20px;font-weight:600}
 b,strong{font-weight:600}
 p{margin-bottom:22px}

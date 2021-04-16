@@ -17,6 +17,10 @@ body {
 	padding: $gap;
 }
 
+header + div {
+	min-height: 50vh;
+}
+
 h2,
 h3,
 h4,
