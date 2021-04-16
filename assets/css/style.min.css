@@ -1,4 +1,4 @@
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+@import url("https://use.typekit.net/xsk3mmq.css");html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
@@ -74,8 +74,6 @@ table{border-collapse:collapse;border-spacing:0}
 textarea{resize:vertical}
 ::-moz-selection{background-color:#b3d4fc;text-shadow:none}
 ::selection{background-color:#b3d4fc;text-shadow:none}
-@font-face{font-family:"Lato";font-style:normal;font-weight:400;src:local(""),url("../fonts/lato/lato-v17-latin-regular.woff2") format("woff2"),url("../fonts/lato/lato-v17-latin-regular.woff") format("woff")}
-@font-face{font-family:"Lato";font-style:normal;font-weight:900;src:local(""),url("../fonts/lato/lato-v17-latin-900.woff2") format("woff2"),url("../fonts/lato/lato-v17-latin-900.woff") format("woff")}
 @font-face{font-family:"GravurLLWeb-CondLight";src:url("../fonts/gravur/GravurLLWeb-CondLight.woff") format("woff")}
 @font-face{font-family:"GravurLLWeb-CondLight";src:url("../fonts/gravur/GravurLLWeb-CondLight.woff2") format("woff2")}
 @font-face{font-family:"GravurLLWeb-CondRegular";src:url("../fonts/gravur/GravurLLWeb-CondRegular.woff") format("woff")}
@@ -318,10 +316,11 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-wrapper .projekt .projekt-foto{display:none}
 .projekte #projekte-current-cat{margin-left:8px;display:inline-block;opacity:0}
 .projekte #projekte-current-cat.active-filter{opacity:1}
-body{font-family:"Lato",sans-serif;opacity:1}
+body{font-family:lato,sans-serif;opacity:1}
 body>.wrapper,body>header#site-header,footer#site-footer body>.section-inner{padding-top:0}
 .wrapper,header#site-header,footer#site-footer .section-inner{width:100%;max-width:1280px;margin:0 auto;padding:40px}
-h2,h3,h4,h5,h6{font-size:20px;font-family:"GravurLLWeb-CondRegular",serif}
+h2,h3,h4,h5,h6{font-size:20px;font-weight:600}
+b,strong{font-weight:600}
 p{margin-bottom:22px}
 li.current_page_item a{color:#437a29}
 .content{display:table-cell;width:100%;vertical-align:middle;margin:0 auto;text-align:center}
