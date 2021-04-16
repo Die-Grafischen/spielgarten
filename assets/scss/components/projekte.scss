@@ -15,12 +15,20 @@
 			height: 190px;
 			position: relative;
 			float: left;
+			@include r(768) {
+				width: 100%;
+			}
 		}
 
 		.projekt-meta {
 			display: block;
 			width: calc(75% - 16px);
 			float: right;
+			@include r(768) {
+				width: 100%;
+				padding-top: 16px;
+				padding-left: 8px;
+			}
 		}
 	}
 
@@ -138,6 +146,9 @@
 			padding-top: 206px;
 			position: relative;
 			cursor: pointer;
+			@include r(768) {
+				width: 100%;
+			}
 
 			&.active-projekt {
 				width: 100%;

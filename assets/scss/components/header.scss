@@ -60,7 +60,45 @@ header#site-header {
 			ul.menu {
 				@include r(768) {
 					margin-top: 80px;
+					display: none;
 				}
+
+				&:nth-child(2) {
+					display: none;
+					@include r(768) {
+						display: block;
+					}
+				}
+
+				.sub-menu {
+					display: none;
+					margin-top: 7px;
+					width: 100%;
+					li {
+						border-top: 1px solid $black;
+						padding-top: 7px;
+						margin-bottom: 7px;
+						width: 100%;
+						&:last-child() {
+							border-bottom: 1px solid $black;
+							padding-bottom: 7px;
+						}
+					}
+
+					a {
+						color: $black;
+						font-size: 22px;
+						text-transform: uppercase;
+					}
+				}
+
+				.current-menu-parent,
+				.current-menu-item {
+					.sub-menu {
+						display: inline-block;
+					}
+				}
+
 				li {
 					float: left;
 					margin-right: 30px;
@@ -68,7 +106,7 @@ header#site-header {
 					margin-bottom: -3px;
 					@include r(768) {
 						width: 100%;
-						margin: 0 0 7px;
+						margin: 0 0 12px;
 					}
 
 					a {

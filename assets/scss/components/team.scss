@@ -20,6 +20,9 @@
 			width: 33.33%;
 			padding: 8px;
 			cursor: pointer;
+			@include r(768) {
+				width: 50%;
+			}
 
 			.close {
 				display: none;
@@ -35,6 +38,9 @@
 
 				.team-member-feat {
 					padding-top: calc(50% - 8px);
+					@include r(768) {
+						padding-top: 0;
+					}
 
 					.team-member-info {
 						width: calc(50% - 8px);
@@ -45,6 +51,12 @@
 						background-color: $alphaGreen;
 						padding: 15px 25px 0;
 						opacity: 1;
+						@include r(768) {
+							position: relative;
+							width: 100%;
+							margin-top: $gap/2;
+							padding-bottom: 15px;
+						}
 
 						.close {
 							display: block;
@@ -54,12 +66,29 @@
 
 						.team-fotos {
 							display: block;
+							@include r(768) {
+								position: relative;
+								width: calc(100% + 50px);
+								margin: 20px 0 0 -25px;
+							}
+							.member-img {
+								@include r(768) {
+									border-bottom: 16px solid #fff;
+									margin-bottom: 0;
+								}
+							}
 						}
 					}
 
 					.feat-img {
 						width: calc(50% - 8px);
 						cursor: pointer;
+
+						@include r(768) {
+							position: relative;
+							width: 100%;
+							padding-top: 100%;
+						}
 
 						img {
 							display: block;

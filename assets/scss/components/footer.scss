@@ -30,6 +30,11 @@ footer#site-footer {
 
 			&.twl {
 				padding-right: 8%;
+				h3 {
+					@include r(768) {
+						margin-top: 0;
+					}
+				}
 			}
 
 			&.twl + .twm {

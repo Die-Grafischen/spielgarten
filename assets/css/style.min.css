@@ -128,6 +128,12 @@ header#site-header{padding:0 !important;color:#437a29;font-family:"GravurLLWeb-C
 header#site-header .header-inner{height:160px;padding:30px 40px 15px;position:relative}
 header#site-header .header-inner .logo{position:absolute;left:40px;top:30px;z-index:10}
 header#site-header .header-inner nav{display:inline-block;position:absolute;left:40px;bottom:15px;font-size:28px}
+header#site-header .header-inner nav ul.menu:nth-child(2){display:none}
+header#site-header .header-inner nav ul.menu .sub-menu{display:none;margin-top:7px;width:100%}
+header#site-header .header-inner nav ul.menu .sub-menu li{border-top:1px solid #000;padding-top:7px;margin-bottom:7px;width:100%}
+header#site-header .header-inner nav ul.menu .sub-menu li:last-child{border-bottom:1px solid #000;padding-bottom:7px}
+header#site-header .header-inner nav ul.menu .sub-menu a{color:#000;font-size:22px;text-transform:uppercase}
+header#site-header .header-inner nav ul.menu .current-menu-parent .sub-menu,header#site-header .header-inner nav ul.menu .current-menu-item .sub-menu{display:inline-block}
 header#site-header .header-inner nav ul.menu li{float:left;margin-right:30px;line-height:1;margin-bottom:-3px}
 header#site-header .header-inner nav ul.menu li a:hover{color:#437a29}
 header#site-header .header-inner nav ul.menu li.current-page-ancestor a{color:#437a29}
@@ -366,17 +372,28 @@ header#site-header{position:fixed;left:0;top:0;z-index:10}
 header#site-header .header-inner{height:80px;padding:25px 20px;background-color:#fff}
 header#site-header .header-inner .logo{top:25px;left:20px}
 header#site-header .header-inner nav{position:fixed;left:-200%;top:0;width:100%;height:100%;background:#fff;z-index:8;padding:0 20px 0;-webkit-transition:all .6s ease-in-out;transition:all .6s ease-in-out;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
-header#site-header .header-inner nav ul.menu{margin-top:80px}
-header#site-header .header-inner nav ul.menu li{width:100%;margin:0 0 7px}
+header#site-header .header-inner nav ul.menu{margin-top:80px;display:none}
+header#site-header .header-inner nav ul.menu:nth-child(2){display:block}
+header#site-header .header-inner nav ul.menu li{width:100%;margin:0 0 12px}
 header#site-header .header-inner nav ul.menu li a{font-size:36px}
 header#site-header .header-inner .alt-logo{display:none}
 header#site-header .header-inner #sub-title{display:none}
 header#site-header .header-inner .contact-icons{display:none}
 #nav-toggle{display:inline-block}
 footer#site-footer .section-inner .text-widget{width:100%;padding-left:0 !important;padding-right:0 !important}
+footer#site-footer .section-inner .text-widget.twl h3{margin-top:0}
 .swiper-slide{padding-top:66.66%}
 .swiper-text{display:none}
 .block-slider{width:calc(100% + 40px);margin-left:-20px}
+.team-members .team-wrapper .team-member{width:50%}
+.team-members .team-wrapper .team-member.active-member .team-member-feat{padding-top:0}
+.team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info{position:relative;width:100%;margin-top:20px;padding-bottom:15px}
+.team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .team-fotos{position:relative;width:calc(100% + 50px);margin:20px 0 0 -25px}
+.team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .team-fotos .member-img{border-bottom:16px solid #fff;margin-bottom:0}
+.team-members .team-wrapper .team-member.active-member .team-member-feat .feat-img{position:relative;width:100%;padding-top:100%}
+.projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:100%}
+.projekte.text-view .projekte-wrapper .projekt .projekt-meta{width:100%;padding-top:16px;padding-left:8px}
+.projekte .projekte-wrapper .projekt{width:100%}
 body{padding-top:80px}
 .wrapper,header#site-header,footer#site-footer .section-inner{padding:20px}
 p{margin-bottom:18px}

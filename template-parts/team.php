@@ -27,9 +27,13 @@
 
 <div class="team-member">
 	<?php 
-        echo '<div class="team-member-feat team-member-media">
+        echo '<div class="team-member-feat team-member-media">';
+        
+            if($foto1Id){
+                echo'<div class="feat-img member-img" style="background-image:url('. esc_url($foto1URL) .')"></div>';
+            }
 
-            <div class="team-member-info">
+            echo '<div class="team-member-info">
 
                 <div class="close"></div>
 
@@ -53,9 +57,7 @@
 
             </div>';
 
-            if($foto1Id){
-                echo'<div class="feat-img member-img" style="background-image:url('. esc_url($foto1URL) .')"></div>';
-            }
+            
         echo '</div>';
         ?>
 </div>
