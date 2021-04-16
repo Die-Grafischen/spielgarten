@@ -7,16 +7,33 @@ header#site-header {
 	padding: 0 !important;
 	color: $green;
 	font-family: "GravurLLWeb-CondRegular", serif;
+	@include r(768) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 10;
+	}
 
 	.header-inner {
 		height: 160px;
 		padding: $gap-top $gap 15px;
 		position: relative;
 
+		@include r(768) {
+			height: 80px;
+			padding: 25px $gap/2;
+			background-color: $white;
+		}
+
 		.logo {
 			position: absolute;
 			left: 40px;
 			top: 30px;
+			z-index: 10;
+			@include r(768) {
+				top: 25px;
+				left: $gap/2;
+			}
 		}
 
 		nav {
@@ -26,14 +43,38 @@ header#site-header {
 			bottom: 15px;
 			font-size: 28px;
 
+			@include r(768) {
+				position: fixed;
+				left: -200%;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: #ffffff;
+				z-index: 8;
+				padding: 0 20px 0;
+				transition: all 0.6s ease-in-out;
+				display: flex;
+				flex-direction: column;
+			}
+
 			ul.menu {
+				@include r(768) {
+					margin-top: 80px;
+				}
 				li {
 					float: left;
 					margin-right: 30px;
 					line-height: 1;
 					margin-bottom: -3px;
+					@include r(768) {
+						width: 100%;
+						margin: 0 0 7px;
+					}
 
 					a {
+						@include r(768) {
+							font-size: 36px;
+						}
 						&:hover {
 							color: $green;
 						}
@@ -64,6 +105,16 @@ header#site-header {
 				height: 100%;
 				width: auto;
 			}
+
+			@include r(768) {
+				display: none;
+			}
+		}
+
+		#sub-title {
+			@include r(768) {
+				display: none;
+			}
 		}
 
 		.contact-icons {
@@ -72,10 +123,93 @@ header#site-header {
 			right: $gap;
 			float: right;
 
+			@include r(768) {
+				display: none;
+			}
+
 			li {
 				display: inline-block;
 				margin-left: 15px;
 			}
 		}
 	}
+}
+
+#nav-toggle {
+	position: fixed;
+	right: $gap/2;
+	top: 34px;
+	width: 28px;
+	height: 17px;
+	display: block;
+	z-index: 10;
+	cursor: pointer;
+	display: none;
+
+	@include r(768) {
+		display: inline-block;
+	}
+}
+
+#nav-toggle span {
+	margin-top: 7px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+	cursor: pointer;
+	height: 2px;
+	width: 28px;
+	background: $black;
+	position: absolute;
+	display: block;
+	content: "";
+}
+
+#nav-toggle span:before {
+	top: -8px;
+}
+
+#nav-toggle span:after {
+	bottom: -8px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+	transition: all 500ms ease-in-out;
+}
+
+#nav-toggle.active {
+	position: fixed;
+}
+
+#nav-toggle.active span {
+	background-color: transparent !important;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+	top: 0;
+}
+
+#nav-toggle.active span:before {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.logged-in #nav-toggle {
+	@include r(480) {
+		display: inline-block;
+	}
+}
+
+body.active-nav header#site-header .header-inner nav {
+	left: 0;
 }

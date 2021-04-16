@@ -71,6 +71,9 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
+	@include r(768) {
+		padding-top: 66.66%;
+	}
 }
 .swiper-slide-invisible-blank {
 	visibility: hidden;
@@ -176,6 +179,9 @@
 	align-items: center;
 	justify-content: center;
 	color: $white;
+	@include r(480) {
+		display: none;
+	}
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -596,8 +602,19 @@ button.swiper-pagination-bullet {
 	font-size: 28px;
 	line-height: 1.2;
 
+	@include r(768) {
+		display: none;
+	}
+
 	p {
 		margin-top: 22px;
 		margin-bottom: 0;
+	}
+}
+
+.block-slider {
+	@include r(768) {
+		width: calc(100% + 40px);
+		margin-left: -$gap/2;
 	}
 }

@@ -65,7 +65,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php } ?>
 
 			<?php if($untertitel) {
-        echo '<h2>'. esc_html($untertitel) .'</h2>';
+        echo '<h2 id="sub-title">'. esc_html($untertitel) .'</h2>';
       } ?>
 
 			<?php if($altLogoSVG) {

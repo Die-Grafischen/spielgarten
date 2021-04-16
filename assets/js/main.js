@@ -118,6 +118,19 @@ jQuery(document).ready(function ($) {
 
       isoTeam.isotope("layout");
     });
-  } //.active-member
+  }
 
+  $("#nav-toggle").on("click", function () {
+    if ($("body").hasClass("active-nav")) {
+      $("body").removeClass("active-nav");
+      $("#nav-toggle").removeClass("active");
+    } else if ($("body").hasClass("active-search")) {
+      $("#search-overlay").fadeToggle();
+      $("body").removeClass("active-search");
+      $("#nav-toggle").removeClass("active");
+    } else {
+      $("body").addClass("active-nav");
+      $("#nav-toggle").addClass("active");
+    }
+  });
 });

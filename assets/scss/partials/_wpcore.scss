@@ -78,9 +78,6 @@ a img.aligncenter {
 	margin: 1rem 0;
 }
 
-.sticky {
-}
-
 .bypostauthor {
 	background: inherit;
 }
@@ -175,4 +172,13 @@ a img.aligncenter {
 
 .wp-block-columns {
 	margin: $gap 0;
+	@include r(768) {
+		margin: $gap/2 0;
+	}
+}
+
+.wp-block-column:not(:first-child) {
+	@include r(768) {
+		margin-left: 0;
+	}
 }

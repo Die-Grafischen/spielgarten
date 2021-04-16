@@ -8,6 +8,9 @@ body {
 	& > .wrapper {
 		padding-top: 0;
 	}
+	@include r(768) {
+		padding-top: 80px;
+	}
 }
 
 .wrapper {
@@ -15,6 +18,10 @@ body {
 	max-width: $max-width;
 	margin: 0 auto;
 	padding: $gap;
+
+	@include r(768) {
+		padding: $gap/2;
+	}
 }
 
 header + div {
@@ -37,6 +44,13 @@ strong {
 
 p {
 	margin-bottom: 22px;
+	@include r(768) {
+		margin-bottom: 18px;
+	}
+}
+
+p:last-child {
+	margin-bottom: 0;
 }
 
 li.current_page_item a {
@@ -122,6 +136,9 @@ aside#site-sidebar {
 			}
 		}
 	}
+	@include r(768) {
+		display: none;
+	}
 }
 
 body:not(.home) {
@@ -130,6 +147,11 @@ body:not(.home) {
 		padding-left: 22px;
 		padding-top: 13px;
 		float: left;
+
+		@include r(768) {
+			width: 100%;
+			padding-left: 0;
+		}
 
 		&.team-members {
 			max-width: 100%;
