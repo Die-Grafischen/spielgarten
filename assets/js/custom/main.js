@@ -7,10 +7,11 @@
 jQuery(document).ready(function ($) {
 	// slider homepage
 	if ($(".block-slider .swiper-wrapper").length) {
-		const swiper = new Swiper(".swiper-container", {
+		const swiperHome = new Swiper(".swiper-container", {
 			// Optional parameters
 			direction: "horizontal",
 			loop: true,
+			slidesPerView: 1,
 
 			// If we need pagination
 			pagination: {
@@ -26,17 +27,17 @@ jQuery(document).ready(function ($) {
 		});
 	}
 
-	// slider on homepage
+	let catName = "alleprojekte";
+
+	// slider on projekte
 	if ($(".projekte-wrapper").length) {
-		let catName;
 		const isoProjekte = $(".projekte-wrapper");
 
-		const swiper = new Swiper(".projekt-slider", {
+		const swiperProjekte = new Swiper(".projekt-slider", {
 			// Optional parameters
 			direction: "horizontal",
 			loop: true,
 			slidesPerView: 1,
-
 			// Navigation arrows
 			navigation: {
 				nextEl: ".swiper-button-next",
@@ -112,6 +113,10 @@ jQuery(document).ready(function ($) {
 		$(".projekte .close").on("click", function () {
 			$(".single-projekt-view").removeClass("single-projekt-view");
 			$(".projekt.active-projekt").removeClass("active-projekt");
+			console.log(catName);
+			isoProjekte.isotope({
+				filter: "." + catName,
+			});
 		});
 	}
 

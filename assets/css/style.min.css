@@ -136,7 +136,7 @@ header#site-header .header-inner nav ul.menu .sub-menu a{color:#000;font-size:22
 header#site-header .header-inner nav ul.menu .current-menu-parent .sub-menu,header#site-header .header-inner nav ul.menu .current-menu-item .sub-menu{display:inline-block}
 header#site-header .header-inner nav ul.menu li{float:left;margin-right:30px;line-height:1;margin-bottom:-3px}
 header#site-header .header-inner nav ul.menu li a:hover{color:#437a29}
-header#site-header .header-inner nav ul.menu li.current-page-ancestor a{color:#437a29}
+header#site-header .header-inner nav ul.menu li.current-page-ancestor>a,header#site-header .header-inner nav ul.menu li.current_page_item>a{color:#437a29}
 header#site-header .header-inner h2{position:absolute;top:30px;right:40px;font-size:28px;font-weight:normal;line-height:1}
 header#site-header .header-inner .alt-logo{position:absolute;top:30px;right:260px;height:115px}
 header#site-header .header-inner .alt-logo svg{height:100%;width:auto}
@@ -364,6 +364,8 @@ body:not(.home) #the-content .wp-block-gallery{max-width:100%;margin-top:40px}
 #site-content,article{display:inline-block;width:100%}
 @media screen{[hidden~="screen"]{display:inherit}
 [hidden~="screen"]:not(:active):not(:focus):not(:target){clip:rect(0 0 0 0) !important;position:absolute !important}
+}@media only screen and (max-device-width:820px) and (orientation:landscape){body{width:100%;height:100vh;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNzggMTc4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNzggMTc4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Zz4KCQk8cGF0aCBmaWxsPSIjRDJEMkQyIiBkPSJNODguNywxNzAuNUgzMi42Yy0wLjYsMC0xLTAuNC0xLTFWOTUuMWMwLTAuNiwwLjQtMSwxLTFoNTR2LTcuNUgxNWMtOC4zLDAtMTUsNi43LTE1LDE1VjE2MwoJCQljMCw4LjMsNi43LDE1LDE1LDE1aDg2LjdDOTYuMSwxNzgsOTEuMywxNzUsODguNywxNzAuNXogTTE3LDE0OS4yYy0xLDAtMS44LTAuOC0xLjgtMS44czAuOC0xLjgsMS44LTEuOGMxLDAsMS44LDAuOCwxLjgsMS44CgkJCVMxOCwxNDkuMiwxNywxNDkuMnogTTE4LjgsMTM4LjdjMCwxLTAuOCwxLjgtMS44LDEuOGMtMSwwLTEuOC0wLjgtMS44LTEuOFYxMjZjMC0xLDAuOC0xLjgsMS44LTEuOGMxLDAsMS44LDAuOCwxLjgsMS44VjEzOC43eiIKCQkJLz4KCQk8cGF0aCBkPSJNMTYzLDBoLTYxLjNjLTguMywwLTE1LDYuNy0xNSwxNXYxNDhjMCw4LjMsNi43LDE1LDE1LDE1SDE2M2M4LjMsMCwxNS02LjcsMTUtMTVWMTVDMTc4LDYuNywxNzEuMywwLDE2MywweiBNMTI2LDE1LjMKCQkJaDEyLjdjMSwwLDEuOCwwLjgsMS44LDEuOGMwLDEtMC44LDEuOC0xLjgsMS44SDEyNmMtMSwwLTEuOC0wLjgtMS44LTEuOEMxMjQuMiwxNi4xLDEyNSwxNS4zLDEyNiwxNS4zeiBNMTE3LjMsMTUuMwoJCQljMSwwLDEuOCwwLjgsMS44LDEuOGMwLDEtMC44LDEuOC0xLjgsMS44cy0xLjgtMC44LTEuOC0xLjhDMTE1LjUsMTYuMSwxMTYuMywxNS4zLDExNy4zLDE1LjN6IE0xMzIuMywxNjkuOGMtNC40LDAtOC0zLjYtOC04CgkJCWMwLTQuNCwzLjYtOCw4LThjNC40LDAsOCwzLjYsOCw4QzE0MC4zLDE2Ni4zLDEzNi43LDE2OS44LDEzMi4zLDE2OS44eiBNMTcwLjUsMTQ1LjFjMCwwLjYtMC40LDEtMSwxSDk1LjFjLTAuNiwwLTEtMC40LTEtMVYzMi42CgkJCWMwLTAuNiwwLjQtMSwxLTFoNzQuNGMwLjYsMCwxLDAuNCwxLDFWMTQ1LjF6Ii8+Cgk8L2c+Cgk8cGF0aCBkPSJNNzYuMywyOC4yTDUxLjgsMjRsMi42LDcuMWMtMTYuMyw5LjUtMjcuOCwyNS45LTMxLjEsNDQuNGw5LjgsMS43YzIuNy0xNS4xLDExLjgtMjguNSwyNC43LTM2LjZsMi41LDYuOEw3Ni4zLDI4LjJ6Ii8+CjwvZz4KPC9zdmc+Cg==) center center no-repeat #fff;background-size:15% auto}
+body>*{display:none !important}
 }@media(max-width:1024px){.wp-caption .wp-caption-text,.gallery-caption{font:300 2rem/3.1rem sans-serif}
 .content h1,.content p{font-weight:100}
 .content h1{text-transform:uppercase}
@@ -398,10 +400,11 @@ footer#site-footer .section-inner .text-widget.twl h3{margin-top:0}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .team-fotos .member-img{border-bottom:16px solid #fff;margin-bottom:0}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .feat-img{position:relative;width:100%;padding-top:100%}
 .team-members .team-wrapper .team-member .team-member-media .team-member-info{display:none}
-.projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:100%}
+.projekte.text-view .projekte-wrapper .projekt{overflow-y:hidden}
+.projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:calc(100% - 16px);height:207px}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{width:100%;padding-top:16px;padding-left:8px}
-.projekte .projekte-wrapper .projekt{width:100%}
-.projekte .projekte-wrapper .projekt.active-projekt .projekt-slider{width:100%;height:190px}
+.projekte .projekte-wrapper .projekt{width:100%;padding-top:223px}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-slider{width:100%;height:223px}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-meta{width:100%;position:relative}
 .close{top:17px;right:20px}
 body{padding-top:80px}

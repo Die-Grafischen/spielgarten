@@ -117,7 +117,8 @@ header#site-header {
 							color: $green;
 						}
 					}
-					&.current-page-ancestor a {
+					&.current-page-ancestor > a,
+					&.current_page_item > a {
 						color: $green;
 					}
 				}

@@ -8,10 +8,11 @@
 jQuery(document).ready(function ($) {
   // slider homepage
   if ($(".block-slider .swiper-wrapper").length) {
-    var swiper = new Swiper(".swiper-container", {
+    var swiperHome = new Swiper(".swiper-container", {
       // Optional parameters
       direction: "horizontal",
       loop: true,
+      slidesPerView: 1,
       // If we need pagination
       pagination: {
         el: ".swiper-pagination",
@@ -23,14 +24,13 @@ jQuery(document).ready(function ($) {
         prevEl: ".swiper-button-prev"
       }
     });
-  } // slider on homepage
+  }
 
+  var catName = "alleprojekte"; // slider on projekte
 
   if ($(".projekte-wrapper").length) {
-    var catName;
     var isoProjekte = $(".projekte-wrapper");
-
-    var _swiper = new Swiper(".projekt-slider", {
+    var swiperProjekte = new Swiper(".projekt-slider", {
       // Optional parameters
       direction: "horizontal",
       loop: true,
@@ -41,7 +41,6 @@ jQuery(document).ready(function ($) {
         prevEl: ".swiper-button-prev"
       }
     });
-
     isoProjekte.isotope({
       // options
       itemSelector: ".projekt"
@@ -95,6 +94,10 @@ jQuery(document).ready(function ($) {
     $(".projekte .close").on("click", function () {
       $(".single-projekt-view").removeClass("single-projekt-view");
       $(".projekt.active-projekt").removeClass("active-projekt");
+      console.log(catName);
+      isoProjekte.isotope({
+        filter: "." + catName
+      });
     });
   }
 
