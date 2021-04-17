@@ -393,10 +393,11 @@ footer#site-footer .section-inner .text-widget.twl h3{margin-top:0}
 .team-members .team-wrapper .team-member{width:50%}
 .team-members .team-wrapper .team-member:hover .team-member-media .team-member-info{opacity:0}
 .team-members .team-wrapper .team-member.active-member .team-member-feat{padding-top:0}
-.team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info{position:relative;width:100%;margin-top:20px;padding-bottom:15px;opacity:1}
+.team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info{position:relative;width:100%;margin-top:20px;padding-bottom:15px;opacity:1;display:block}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .team-fotos{position:relative;width:calc(100% + 50px);margin:20px 0 0 -25px}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .team-fotos .member-img{border-bottom:16px solid #fff;margin-bottom:0}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .feat-img{position:relative;width:100%;padding-top:100%}
+.team-members .team-wrapper .team-member .team-member-media .team-member-info{display:none}
 .projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:100%}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{width:100%;padding-top:16px;padding-left:8px}
 .projekte .projekte-wrapper .projekt{width:100%}
