@@ -169,6 +169,10 @@
 					// padding-top: 36.6%;
 					height: 447px;
 					margin: 0 12px 12px;
+					@include r(768) {
+						width: 100%;
+						height: 190px;
+					}
 
 					.swiper-wrapper,
 					.swiper-btn {
@@ -182,6 +186,10 @@
 					margin: 0 12px 12px;
 					background-color: $alphaGreen;
 					padding: 15px 25px;
+					@include r(768) {
+						width: 100%;
+						position: relative;
+					}
 
 					.projekt-category {
 						display: none;
@@ -270,4 +278,8 @@
 	top: 25px;
 	cursor: pointer;
 	display: block;
+	@include r(768) {
+		top: 17px;
+		right: 20px;
+	}
 }

@@ -30,6 +30,9 @@
 
 			&:hover .team-member-media .team-member-info {
 				opacity: 1;
+				@include r(768) {
+					opacity: 0;
+				}
 			}
 
 			&.active-member {
@@ -56,6 +59,7 @@
 							width: 100%;
 							margin-top: $gap/2;
 							padding-bottom: 15px;
+							opacity: 1;
 						}
 
 						.close {

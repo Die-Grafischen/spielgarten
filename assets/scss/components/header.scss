@@ -251,3 +251,9 @@ header#site-header {
 body.active-nav header#site-header .header-inner nav {
 	left: 0;
 }
+
+.block-slider .alt-logo {
+	@include r(768) {
+		margin: $gap/2 $gap/2 0;
+	}
+}

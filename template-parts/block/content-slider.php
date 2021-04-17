@@ -5,8 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $fields = get_fields();
-$slider = !empty($fields['slider']) ? $fields['slider'] : false;
-
+$slider = $fields['slider'] ?: false;
+$textMobile = $fields['textmobile'] ?: false;
 
 if($slider){
 	echo '<div class="block-slider acf-block swiper-container">
@@ -36,9 +36,12 @@ if($slider){
 
 		<!-- If we need navigation buttons -->
 		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
+		<div class="swiper-button-next"></div>';
 
-	</div>';
+		if($textMobile) echo '<div class="slider-text-mobile">'. wp_kses_post($textMobile) .'</div>';
+		
+
+	echo '</div>';
 }
 
 

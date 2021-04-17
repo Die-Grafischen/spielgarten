@@ -132,5 +132,21 @@ jQuery(document).ready(function ($) {
       $("body").addClass("active-nav");
       $("#nav-toggle").addClass("active");
     }
-  });
+  }); // move sub logo after slider on mobile
+
+  if ($(".home .block-slider").length && $(".home .alt-logo").length && $(window).width() < 769) {
+    $(".alt-logo").insertAfter(".swiper-wrapper");
+  } // move slogan in slider on mobile
+
+
+  if ($(".home .block-slider").length && $(".home #sub-title").length && $(window).width() < 769) {
+    $(".swiper-text, .swiper-link").remove();
+    $("#sub-title").appendTo(".swiper-slide").wrap('<div class="swiper-text"></div>');
+    var pagginationTop = $(".swiper-wrapper").height() - 40;
+    $(".swiper-pagination").css({
+      top: pagginationTop,
+      bottom: "auto",
+      opacity: 1
+    });
+  }
 });

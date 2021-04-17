@@ -84,6 +84,25 @@
                     "multiple": 0
                 }
             ]
+        },
+        {
+            "key": "field_607aa5606b655",
+            "label": "Text (mobile)",
+            "name": "textmobile",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -103,5 +122,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617735582
+    "modified": 1618650512
 }

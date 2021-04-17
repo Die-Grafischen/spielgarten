@@ -235,6 +235,9 @@
 	transition: 300ms opacity;
 	transform: translate3d(0, 0, 0);
 	z-index: 10;
+	@include r(768) {
+		opacity: 0;
+	}
 }
 .swiper-pagination.swiper-pagination-hidden {
 	opacity: 0;
@@ -603,7 +606,12 @@ button.swiper-pagination-bullet {
 	line-height: 1.2;
 
 	@include r(768) {
-		display: none;
+		padding: $gap/2;
+	}
+
+	h2 {
+		font-weight: normal;
+		font-size: 28px;
 	}
 
 	p {
@@ -616,5 +624,16 @@ button.swiper-pagination-bullet {
 	@include r(768) {
 		width: calc(100% + 40px);
 		margin-left: -$gap/2;
+	}
+
+	.slider-text-mobile {
+		display: none;
+		padding: $gap/2 $gap/2 0;
+		font-weight: 600;
+		font-size: 20px;
+
+		@include r(768) {
+			display: block;
+		}
 	}
 }
