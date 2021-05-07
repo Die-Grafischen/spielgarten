@@ -130,9 +130,9 @@ header#site-header .header-inner .logo{position:absolute;left:40px;top:30px;z-in
 header#site-header .header-inner nav{display:inline-block;position:absolute;left:40px;bottom:15px;font-size:28px}
 header#site-header .header-inner nav ul.menu:nth-child(2){display:none}
 header#site-header .header-inner nav ul.menu .sub-menu{display:none;margin-top:7px;width:100%}
-header#site-header .header-inner nav ul.menu .sub-menu li{border-top:1px solid #000;padding-top:7px;margin-bottom:7px;width:100%}
-header#site-header .header-inner nav ul.menu .sub-menu li:last-child{border-bottom:1px solid #000;padding-bottom:7px}
-header#site-header .header-inner nav ul.menu .sub-menu a{color:#000;font-size:22px;text-transform:uppercase}
+header#site-header .header-inner nav ul.menu .sub-menu li{border-top:1px solid #000;padding-top:2px;margin-bottom:7px;width:100%}
+header#site-header .header-inner nav ul.menu .sub-menu li:last-child{border-bottom:1px solid #000;padding-bottom:7px;margin-bottom:0}
+header#site-header .header-inner nav ul.menu .sub-menu a{color:#000;font-size:18px;text-transform:uppercase}
 header#site-header .header-inner nav ul.menu .current-menu-parent .sub-menu,header#site-header .header-inner nav ul.menu .current-menu-item .sub-menu{display:inline-block}
 header#site-header .header-inner nav ul.menu li{float:left;margin-right:35px;line-height:1;margin-bottom:-3px}
 header#site-header .header-inner nav ul.menu li a:hover{color:#437a29}
@@ -144,7 +144,7 @@ header#site-header .header-inner .contact-icons{position:absolute;bottom:15px;ri
 header#site-header .header-inner .contact-icons li{display:inline-block;margin-left:15px}
 #nav-toggle{position:fixed;right:20px;top:34px;width:28px;height:17px;display:block;z-index:10;cursor:pointer;display:none}
 #nav-toggle span{margin-top:7px}
-#nav-toggle span,#nav-toggle span:before,#nav-toggle span:after{cursor:pointer;height:2px;width:28px;background:#000;position:absolute;display:block;content:""}
+#nav-toggle span,#nav-toggle span:before,#nav-toggle span:after{cursor:pointer;height:2px;width:28px;border-radius:1px;background:#000;position:absolute;display:block;content:""}
 #nav-toggle span:before{top:-8px}
 #nav-toggle span:after{bottom:-8px}
 #nav-toggle span,#nav-toggle span:before,#nav-toggle span:after{-webkit-transition:all 500ms ease-in-out;transition:all 500ms ease-in-out}
@@ -265,7 +265,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .swiper-text{font-family:"GravurLLWeb-CondRegular",serif;color:#fff;padding:40px;position:absolute;left:0;bottom:30px;width:100%;font-size:28px;line-height:1.2}
 .swiper-text h2{font-weight:normal;font-size:28px}
 .swiper-text p{margin-top:22px;margin-bottom:0}
-.block-slider .slider-text-mobile{display:none;padding:20px 20px 0;font-weight:600;font-size:20px}
+.block-slider .slider-text-mobile{display:none;padding:20px 20px 0;font-weight:400;font-size:29px;font-family:"GravurLLWeb-CondRegular",serif}
 .team-members>img{width:100% !important;max-width:100% !important;margin-bottom:8px}
 .team-members .team-wrapper{max-width:calc(100% + 16px) !important;width:calc(100% + 16px);margin-left:-8px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-transition:all .3s linear;transition:all .3s linear}
 .team-members .team-wrapper .sizer{width:33.33%}
@@ -352,6 +352,7 @@ b,strong{font-weight:600}
 p{margin-bottom:12px}
 p:last-child{margin-bottom:0}
 li.current_page_item a{color:#437a29}
+#mobile-team-title{display:none}
 .content{display:table-cell;width:100%;vertical-align:middle;margin:0 auto;text-align:center}
 .content h1,.content p{font-family:Lato;font-weight:100}
 .content h1{text-transform:uppercase}
@@ -383,7 +384,7 @@ header#site-header .header-inner nav{position:fixed;left:-200%;top:0;width:100%;
 header#site-header .header-inner nav ul.menu{margin-top:80px;display:none}
 header#site-header .header-inner nav ul.menu:nth-child(2){display:block}
 header#site-header .header-inner nav ul.menu li{width:100%;margin:0 0 12px}
-header#site-header .header-inner nav ul.menu li a{font-size:36px}
+header#site-header .header-inner nav ul.menu li a{font-size:28px}
 header#site-header .header-inner .alt-logo{display:none}
 header#site-header .header-inner #sub-title{display:none}
 header#site-header .header-inner .contact-icons{display:none}
@@ -392,8 +393,8 @@ header#site-header .header-inner .contact-icons{display:none}
 footer#site-footer .section-inner .text-widget{width:100%;padding-left:0 !important;padding-right:0 !important}
 footer#site-footer .section-inner .text-widget.twl h3{margin-top:0}
 .swiper-slide{padding-top:66.66%}
-.swiper-pagination{opacity:0}
 .swiper-text{padding:20px}
+.swiper-text h2#sub-title{font-size:36px}
 .block-slider{width:calc(100% + 40px);margin-left:-20px}
 .block-slider .slider-text-mobile{display:block}
 .team-members .team-wrapper .team-member{width:50%}
@@ -421,6 +422,9 @@ body:not(.home) #the-content{width:100%;padding-left:0}
 }@media(max-width:480px){.wp-caption .wp-caption-text,.gallery-caption{font:300 1.8rem/1.8 sans-serif}
 .logged-in #nav-toggle{display:inline-block}
 .swiper-button-prev,.swiper-button-next{display:none}
+.swiper-pagination{display:none}
+.swiper-text{bottom:0}
+#mobile-team-title{display:block}
 .content h1,.content p{font-weight:100}
 .content h1{text-transform:uppercase}
 }@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}

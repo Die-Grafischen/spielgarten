@@ -57,6 +57,13 @@ li.current_page_item a {
 	color: $green;
 }
 
+#mobile-team-title {
+	display: none;
+	@include r(480) {
+		display: block;
+	}
+}
+
 .content {
 	display: table-cell;
 	width: 100%;

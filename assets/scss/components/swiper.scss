@@ -235,8 +235,8 @@
 	transition: 300ms opacity;
 	transform: translate3d(0, 0, 0);
 	z-index: 10;
-	@include r(768) {
-		opacity: 0;
+	@include r(480) {
+		display: none;
 	}
 }
 .swiper-pagination.swiper-pagination-hidden {
@@ -605,6 +605,10 @@ button.swiper-pagination-bullet {
 	font-size: 28px;
 	line-height: 1.2;
 
+	@include r(480) {
+		bottom: 0;
+	}
+
 	@include r(768) {
 		padding: $gap/2;
 	}
@@ -618,6 +622,12 @@ button.swiper-pagination-bullet {
 		margin-top: 22px;
 		margin-bottom: 0;
 	}
+
+	h2#sub-title {
+		@include r(768) {
+			font-size: 36px;
+		}
+	}
 }
 
 .block-slider {
@@ -629,8 +639,9 @@ button.swiper-pagination-bullet {
 	.slider-text-mobile {
 		display: none;
 		padding: $gap/2 $gap/2 0;
-		font-weight: 600;
-		font-size: 20px;
+		font-weight: 400;
+		font-size: 29px;
+		font-family: "GravurLLWeb-CondRegular", serif;
 
 		@include r(768) {
 			display: block;

@@ -16,6 +16,10 @@ get_header();
 
 <main id="site-content" role="main">
 	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+		<?php $mobileTitle = get_field('titel', $id) ?: false;
+        if($mobileTitle) {
+            echo '<h2 id="mobile-team-title">'. esc_html($mobileTitle) .'</h2>';
+        } ?>
 
 		<div id="the-content" class="projekte grid-view">
 
