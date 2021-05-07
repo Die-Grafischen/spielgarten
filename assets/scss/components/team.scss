@@ -65,8 +65,6 @@
 
 						.close {
 							display: block;
-							top: 15px;
-							right: 20px;
 						}
 
 						.team-fotos {
@@ -106,6 +104,11 @@
 
 					.name {
 						text-align: left;
+						font-size: 16px;
+					}
+
+					.position {
+						text-transform: uppercase;
 					}
 				}
 			}
@@ -196,7 +199,6 @@
 
 			.position {
 				width: 100%;
-				padding: 0 8px;
 				text-transform: uppercase;
 			}
 

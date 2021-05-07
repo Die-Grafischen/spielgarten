@@ -83,16 +83,10 @@ get_header();
                                 echo '<li>' . $term->name .  '</li>';
                                 }
                             echo '</ul>
-							<svg xmlns="http://www.w3.org/2000/svg" width="13.975" height="13.975" viewBox="0 0 13.975 13.975" class="close-icon">
-								<g id="Group_196" data-name="Group 196" transform="translate(-327.187 -195.701)">
-									<path id="Path_395" data-name="Path 395" d="M1551.717,3145.231l12.914,12.914"
-										transform="translate(-1224 -2949)" fill="none" stroke="#437a29" stroke-width="1.25" />
-									<path id="Path_396" data-name="Path 396" d="M1551.717,3145.231l12.914,12.914"
-										transform="translate(-2817.514 1760.863) rotate(-90)" fill="none" stroke="#437a29"
-										stroke-width="1.5" />
-								</g>
+							<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="16px" viewBox="0 0 24 20" class="close-icon">	
+								<path class="st0"
+									d="M19.7,15.8c0,0-0.1-0.1-0.1-0.1L13.9,10l5.7-5.7c0,0,0,0,0,0l1.1-1.1l-1.9-1.9l-1,1c0,0,0,0-0.1,0 c0,0-0.1,0.1-0.1,0.1L12,8.1L6.3,2.4c0,0,0,0,0,0L5.2,1.3L3.3,3.2l1,1c0,0,0,0,0,0.1c0,0,0.1,0,0.1,0.1l5.7,5.7l-6.8,6.8l1.9,1.9 l1-1c0,0,0,0,0.1,0c0,0,0-0.1,0.1-0.1l5.7-5.7l5.7,5.7c0,0,0,0,0,0l1.1,1.1l1.9-1.9L19.7,15.8C19.7,15.8,19.7,15.8,19.7,15.8z" />
 							</svg>
-
                         </div>';
                     }?>
 

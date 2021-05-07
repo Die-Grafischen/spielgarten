@@ -20,6 +20,7 @@
     $taxObj = get_the_terms(get_the_ID(), 'kategorie');
     $categories = '';
     $cat = '';
+    $catName = '';
     if ( ! empty( $taxObj ) && ! is_wp_error( $taxObj ) ) {
         $categories = wp_list_pluck( $taxObj, 'name' );
         $cat = strtolower(join($categories));
@@ -59,11 +60,14 @@
                 echo '<div class="projekt-info">'. wp_kses_post($info) .'</div>';
             }
 
-            echo '<div class="projekt-category">'. esc_html($catName) .'</div>';
+            echo '<div class="projekt-category">
+                <span class="projekt-ca" data-ca="'. esc_attr($catName).'">Kategorie: '. esc_html($catName) .'</span><br>
+                <span class="projekt-back">< zurück</span>
+            </div>';
 
         echo '</div>';
         
-        // galery photos skip first image
+        // gallery photos skip first image
         $counter = 0;
         foreach($fotos as $foto){
             if ($counter++ == 0) continue;

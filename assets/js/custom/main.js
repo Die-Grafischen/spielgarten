@@ -110,13 +110,26 @@ jQuery(document).ready(function ($) {
 			$(".projekte-nav").removeClass("cat-view");
 		});
 
-		$(".projekte .close").on("click", function () {
+		$(".projekte .close, .projekt-category span.projekt-back").on(
+			"click",
+			function () {
+				$(".single-projekt-view").removeClass("single-projekt-view");
+				$(".projekt.active-projekt").removeClass("active-projekt");
+				isoProjekte.isotope({
+					filter: "." + catName,
+				});
+			}
+		);
+
+		$(".projekt-category span.projekt-ca").on("click", function () {
 			$(".single-projekt-view").removeClass("single-projekt-view");
 			$(".projekt.active-projekt").removeClass("active-projekt");
-			console.log(catName);
-			isoProjekte.isotope({
-				filter: "." + catName,
-			});
+			console.log($(this).parent());
+			// isoProjekte.isotope({
+			// 	filter: "." + catName,
+			// });
+
+			$("#projekte-cats li:nth-child(2)").addClass("gdddddddd");
 		});
 	}
 

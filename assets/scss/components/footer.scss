@@ -11,6 +11,7 @@ footer#site-footer {
 		@extend .wrapper;
 		display: flex;
 		flex-wrap: wrap;
+		padding-top: 15px !important;
 
 		h2,
 		h3,

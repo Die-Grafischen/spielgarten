@@ -40,7 +40,7 @@
                 <h2 class="name">'. get_the_title() .'</h2>';
 
                 if($position){
-                    echo '<span class="positon">'. esc_html($position) .'</span>';
+                    echo '<span class="position">'. esc_html($position) .'</span>';
                 }
 
                 if($text){
