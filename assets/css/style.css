@@ -239,7 +239,7 @@ textarea { resize: vertical; }
 
 html { height: 100%; min-height: 100%; }
 
-body { font: 400 16px/1.4 sans-serif; color: #000000; margin: 0; height: 100%; min-height: 100%; }
+body { font: 400 12px/1.4 sans-serif; color: #000000; margin: 0; height: 100%; min-height: 100%; }
 
 /* clear */
 .clear:before, .clear:after { content: " "; display: table; }
