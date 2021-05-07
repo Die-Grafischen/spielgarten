@@ -16,12 +16,12 @@ get_header();
 
 <main id="site-content" role="main">
 	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-		<?php $mobileTitle = get_field('titel', $id) ?: false;
-        if($mobileTitle) {
-            echo '<h2 id="mobile-team-title">'. esc_html($mobileTitle) .'</h2>';
-        } ?>
 
 		<div id="the-content" class="projekte grid-view">
+			<?php $mobileTitle = get_field('titel', $id) ?: false;
+			if($mobileTitle) {
+				echo '<h2 id="mobile-team-title">'. esc_html($mobileTitle) .'</h2>';
+			} ?>
 
 			<div class="projekte-nav">
 				<svg xmlns="http://www.w3.org/2000/svg" width="19.382" height="18.429" viewBox="0 0 19.382 18.429"

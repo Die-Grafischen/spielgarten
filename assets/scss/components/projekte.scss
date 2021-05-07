@@ -33,6 +33,10 @@
 				padding-top: 16px;
 				padding-left: 8px;
 			}
+
+			@include r(480) {
+				padding-top: 20px;
+			}
 		}
 	}
 
@@ -68,8 +72,8 @@
 		}
 
 		#projekte-current-cat {
-			background-color: $alphaGreen;
-			padding: 0 5px 2px;
+			color: $green;
+			padding: 0 5px 2px 0;
 			height: 24px;
 			line-height: 1px;
 			display: flex;
@@ -170,6 +174,10 @@
 					display: block;
 					top: 25px;
 					right: 25px;
+					@include r(480) {
+						top: 15px;
+						right: 15px;
+					}
 				}
 
 				.projekt-slider {
@@ -215,6 +223,12 @@
 						display: inline-block;
 						margin-top: span {
 							color: $green;
+						}
+						@include r(480) {
+							margin-top: 12px;
+							position: relative;
+							bottom: auto;
+							left: auto;
 						}
 					}
 				}
@@ -276,11 +290,17 @@
 
 				.projekt-info {
 					padding-top: 8px;
+					@include r(480) {
+						display: none;
+					}
 				}
 
 				.projekt-category {
 					color: $green;
 					cursor: pointer;
+					@include r(480) {
+						display: none;
+					}
 				}
 			}
 			.projekt-foto {
@@ -312,5 +332,15 @@
 	@include r(768) {
 		top: 17px;
 		right: 20px;
+	}
+}
+
+.page-template-template-projekte {
+	#mobile-team-title {
+		padding: 0 7px;
+
+		& + .projekte-nav {
+			padding-top: 7px;
+		}
 	}
 }

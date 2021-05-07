@@ -3,6 +3,9 @@
 		width: 100% !important;
 		max-width: 100% !important;
 		margin-bottom: 8px;
+		@include r(480) {
+			margin-bottom: 4px;
+		}
 	}
 
 	.team-wrapper {
@@ -12,7 +15,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		transition: all 0.3s linear;
-
+		@include r(480) {
+			max-width: calc(100% + 8px) !important;
+			width: calc(100% + 8px);
+			margin-left: -4px;
+		}
 		.sizer {
 			width: 33.33%;
 		}
@@ -22,6 +29,10 @@
 			cursor: pointer;
 			@include r(768) {
 				width: 50%;
+			}
+
+			@include r(480) {
+				padding: 4px;
 			}
 
 			.close {
@@ -65,6 +76,10 @@
 
 						.close {
 							display: block;
+							@include r(480) {
+								top: 15px;
+								right: 15px;
+							}
 						}
 
 						.team-fotos {

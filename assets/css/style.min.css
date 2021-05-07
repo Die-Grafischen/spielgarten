@@ -305,7 +305,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-nav>svg:hover path{fill:#000}
 .projekte .projekte-nav>svg.active-icon path{fill:#000}
 .projekte .projekte-nav.cat-view #projekte-cats{display:block}
-.projekte .projekte-nav #projekte-current-cat{background-color:#f1f4eb;padding:0 5px 2px;height:24px;line-height:1px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.projekte .projekte-nav #projekte-current-cat{color:#437a29;padding:0 5px 2px 0;height:24px;line-height:1px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .projekte .projekte-nav #projekte-cats{position:absolute;top:24px;left:59px;padding:8px 16px;z-index:2;background-color:#f1f4eb;display:none}
 .projekte .projekte-nav #projekte-cats ul{list-style:none;padding-right:16px}
 .projekte .projekte-nav #projekte-cats ul li{padding-bottom:6px;color:#437a29;cursor:pointer}
@@ -343,6 +343,8 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte #projekte-current-cat{margin-left:8px;display:inline-block;opacity:0}
 .projekte #projekte-current-cat.active-filter{opacity:1}
 .close{width:20px;height:20px;background:url("../images/mobile-nav-close.svg") center center/contain no-repeat;position:absolute;right:15px;top:15px;cursor:pointer;display:block}
+.page-template-template-projekte #mobile-team-title{padding:0 7px}
+.page-template-template-projekte #mobile-team-title+.projekte-nav{padding-top:7px}
 body{font-family:lato,sans-serif;opacity:1}
 body>.wrapper,body>header#site-header,footer#site-footer body>.section-inner{padding-top:0}
 .wrapper,header#site-header,footer#site-footer .section-inner{width:100%;max-width:1280px;margin:0 auto;padding:40px}
@@ -424,6 +426,15 @@ body:not(.home) #the-content{width:100%;padding-left:0}
 .swiper-button-prev,.swiper-button-next{display:none}
 .swiper-pagination{display:none}
 .swiper-text{bottom:0}
+.team-members>img{margin-bottom:4px}
+.team-members .team-wrapper{max-width:calc(100% + 8px) !important;width:calc(100% + 8px);margin-left:-4px}
+.team-members .team-wrapper .team-member{padding:4px}
+.team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .close{top:15px;right:15px}
+.projekte.text-view .projekte-wrapper .projekt .projekt-meta{padding-top:20px}
+.projekte .projekte-wrapper .projekt.active-projekt .close{top:15px;right:15px}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-meta .projekt-category{margin-top:12px;position:relative;bottom:auto;left:auto}
+.projekte .projekte-wrapper .projekt .projekt-meta .projekt-info{display:none}
+.projekte .projekte-wrapper .projekt .projekt-meta .projekt-category{display:none}
 #mobile-team-title{display:block}
 .content h1,.content p{font-weight:100}
 .content h1{text-transform:uppercase}
