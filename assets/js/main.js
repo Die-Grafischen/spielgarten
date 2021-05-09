@@ -116,6 +116,7 @@ jQuery(document).ready(function ($) {
       layoutMode: "packery"
     });
     $(".team-wrapper").on("click", ".team-member", function () {
+      var th = this;
       $(".team-members > img").fadeOut();
 
       if ($(this).hasClass("active-member")) {
@@ -127,6 +128,16 @@ jQuery(document).ready(function ($) {
       }
 
       isoTeam.isotope("layout");
+      isoTeam.isotope("on", "layoutComplete", function () {
+        if (window.innerWidth < 800) {
+          var headerHeight = document.getElementById("site-header").offsetHeight; //let topToScroll = this.offsetTop - headerHeight;
+
+          window.scrollTo({
+            top: th.offsetTop,
+            behavior: "smooth"
+          });
+        }
+      });
     });
   }
 

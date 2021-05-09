@@ -142,6 +142,7 @@ jQuery(document).ready(function ($) {
 		});
 
 		$(".team-wrapper").on("click", ".team-member", function () {
+			let th = this;
 			$(".team-members > img").fadeOut();
 
 			if ($(this).hasClass("active-member")) {
@@ -152,6 +153,17 @@ jQuery(document).ready(function ($) {
 				$(this).addClass("active-member");
 			}
 			isoTeam.isotope("layout");
+			isoTeam.isotope("on", "layoutComplete", function () {
+				if (window.innerWidth < 800) {
+					let headerHeight = document.getElementById("site-header")
+						.offsetHeight;
+					//let topToScroll = this.offsetTop - headerHeight;
+					window.scrollTo({
+						top: th.offsetTop,
+						behavior: "smooth",
+					});
+				}
+			});
 		});
 	}
 
