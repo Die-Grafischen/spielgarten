@@ -130,10 +130,9 @@ jQuery(document).ready(function ($) {
       isoTeam.isotope("layout");
       isoTeam.isotope("on", "layoutComplete", function () {
         if (window.innerWidth < 800) {
-          var headerHeight = document.getElementById("site-header").offsetHeight; //let topToScroll = this.offsetTop - headerHeight;
-
+          var headerHeight = document.getElementById("site-header").offsetHeight;
           window.scrollTo({
-            top: th.offsetTop,
+            top: th.offsetTop + headerHeight + 8,
             behavior: "smooth"
           });
         }

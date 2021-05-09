@@ -157,9 +157,8 @@ jQuery(document).ready(function ($) {
 				if (window.innerWidth < 800) {
 					let headerHeight = document.getElementById("site-header")
 						.offsetHeight;
-					//let topToScroll = this.offsetTop - headerHeight;
 					window.scrollTo({
-						top: th.offsetTop,
+						top: th.offsetTop + headerHeight + 8,
 						behavior: "smooth",
 					});
 				}
