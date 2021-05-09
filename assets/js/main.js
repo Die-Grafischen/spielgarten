@@ -55,7 +55,6 @@ jQuery(document).ready(function ($) {
         projekt.parent().parent().parent().find(".projekt-foto").each(function () {
           var bgr = "url(" + $(this).data("foto") + ")";
           $(this).css("background-image", bgr);
-          console.log(bgr);
         });
       }
     });
@@ -101,11 +100,11 @@ jQuery(document).ready(function ($) {
     $(".projekt-category span.projekt-ca").on("click", function () {
       $(".single-projekt-view").removeClass("single-projekt-view");
       $(".projekt.active-projekt").removeClass("active-projekt");
-      console.log($(this).parent()); // isoProjekte.isotope({
-      // 	filter: "." + catName,
-      // });
-
-      $("#projekte-cats li:nth-child(2)").addClass("gdddddddd");
+      var currentCat = $(this).attr("data-ca");
+      $("#projekte-current-cat").addClass("active-filter").text(currentCat);
+      isoProjekte.isotope({
+        filter: "." + currentCat.toLowerCase()
+      });
     });
   }
 
@@ -160,4 +159,13 @@ jQuery(document).ready(function ($) {
       opacity: 1
     });
   }
+}); //scroll to top for projects
+
+document.querySelectorAll(".to-the-top svg").forEach(function (arrow) {
+  arrow.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
 });

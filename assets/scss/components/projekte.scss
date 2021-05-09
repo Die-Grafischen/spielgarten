@@ -163,6 +163,16 @@
 				padding-top: 223px;
 			}
 
+			.to-the-top {
+				display: none;
+				text-align: center;
+				width: 100%;
+				svg {
+					margin: 12px auto 0;
+					cursor: pointer;
+				}
+			}
+
 			&.active-projekt {
 				width: 100%;
 				display: flex;
@@ -170,14 +180,14 @@
 				padding-top: 8px;
 				cursor: default;
 
+				.to-the-top {
+					display: block;
+				}
+
 				.close {
 					display: block;
-					top: 25px;
-					right: 25px;
-					@include r(480) {
-						top: 15px;
-						right: 15px;
-					}
+					top: 15px;
+					right: 15px;
 				}
 
 				.projekt-slider {
