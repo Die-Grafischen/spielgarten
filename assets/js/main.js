@@ -7,23 +7,54 @@
  */
 jQuery(document).ready(function ($) {
   // slider homepage
-  if ($(".block-slider .swiper-wrapper").length) {
-    var swiperHome = new Swiper(".swiper-container", {
-      // Optional parameters
-      direction: "horizontal",
-      loop: true,
-      slidesPerView: 1,
-      // If we need pagination
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      }
+  if ($(".home .wp-block-columns").length && screen.width < 600) {
+    $(".home .wp-block-columns p:first-of-type").next().after('<p class="mobile-more">Weiterlesen</p>').nextAll().addClass("hide-mobile");
+    $(".home .wp-block-columns .wp-block-column:nth-child(2)").addClass("hide-mobile");
+    $(".home .wp-block-columns").on("click", ".mobile-more", function () {
+      $(".hide-mobile").slideToggle();
     });
+  }
+
+  if ($(".block-slider .swiper-wrapper").length) {
+    if (screen.width < 800) {
+      var swiperHomeMobile = new Swiper(".swiper-container", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: 1,
+        autoplay: {
+          delay: 4000
+        },
+        speed: 600,
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+    } else {
+      var swiperHome = new Swiper(".swiper-container", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: 1,
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+    }
   }
 
   var catName = "alleprojekte"; // slider on projekte

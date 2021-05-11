@@ -371,6 +371,7 @@ body:not(.home) #the-content{width:80%;padding-left:22px;padding-top:13px;float:
 body:not(.home) #the-content.team-members{max-width:100%}
 body:not(.home) #the-content>*{max-width:710px}
 body:not(.home) #the-content .wp-block-gallery{max-width:100%;margin-top:40px}
+.mobile-more{display:none}
 #site-content,article{display:inline-block;width:100%}
 @media screen{[hidden~="screen"]{display:inherit}
 [hidden~="screen"]:not(:active):not(:focus):not(:target){clip:rect(0 0 0 0) !important;position:absolute !important}
@@ -440,6 +441,8 @@ body:not(.home) #the-content{width:100%;padding-left:0}
 #mobile-team-title{display:block}
 .content h1,.content p{font-weight:100}
 .content h1{text-transform:uppercase}
+.hide-mobile.mobile-more{display:block;cursor:pointer}
+.hide-mobile{display:none}
 }@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }@keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }

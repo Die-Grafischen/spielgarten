@@ -176,6 +176,22 @@ body:not(.home) {
 	}
 }
 
+.mobile-more {
+	display: none;
+}
+
+.hide-mobile {
+	&.mobile-more {
+		@include r(480) {
+			display: block;
+			cursor: pointer;
+		}
+	}
+	@include r(480) {
+		display: none;
+	}
+}
+
 #site-content,
 article {
 	display: inline-block;
