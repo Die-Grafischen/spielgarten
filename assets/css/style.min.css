@@ -389,7 +389,7 @@ header#site-header .header-inner .logo{top:25px;left:20px}
 header#site-header .header-inner nav{position:fixed;left:-200%;top:0;width:100%;height:100%;background:#fff;z-index:8;padding:0 20px 0;-webkit-transition:all .6s ease-in-out;transition:all .6s ease-in-out;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 header#site-header .header-inner nav ul.menu{margin-top:80px;display:none}
 header#site-header .header-inner nav ul.menu:nth-child(2){display:block}
-header#site-header .header-inner nav ul.menu li{width:200px;margin:0 0 12px}
+header#site-header .header-inner nav ul.menu li{width:200px;margin:0 0 12px;float:none}
 header#site-header .header-inner nav ul.menu li a{font-size:28px}
 header#site-header .header-inner .alt-logo{display:none}
 header#site-header .header-inner #sub-title{display:none}
@@ -441,7 +441,7 @@ body:not(.home) #the-content{width:100%;padding-left:0}
 #mobile-team-title{display:block}
 .content h1,.content p{font-weight:100}
 .content h1{text-transform:uppercase}
-.hide-mobile.mobile-more{display:block;cursor:pointer}
+.hide-mobile.mobile-more{display:block;cursor:pointer;color:#437a29}
 .hide-mobile{display:none}
 }@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }@keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}

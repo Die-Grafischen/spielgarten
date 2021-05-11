@@ -108,6 +108,7 @@ header#site-header {
 					@include r(768) {
 						width: 200px;
 						margin: 0 0 12px;
+						float: none;
 					}
 
 					a {

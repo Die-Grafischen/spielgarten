@@ -6,7 +6,15 @@
  * @since 1.0.0
  */
 jQuery(document).ready(function ($) {
-  // slider homepage
+  //mobile menu modifications
+  if (screen.width < 800) {
+    $("#menu-mobile-menu").on("click", ".menu-item-has-children > a", function (event) {
+      event.preventDefault();
+      $(this).next(".sub-menu").slideToggle();
+    });
+  } // slider homepage
+
+
   if ($(".home .wp-block-columns").length && screen.width < 600) {
     $(".home .wp-block-columns p:first-of-type").next().after('<p class="mobile-more">Weiterlesen</p>').nextAll().addClass("hide-mobile");
     $(".home .wp-block-columns .wp-block-column:nth-child(2)").addClass("hide-mobile");

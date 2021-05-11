@@ -185,6 +185,7 @@ body:not(.home) {
 		@include r(480) {
 			display: block;
 			cursor: pointer;
+			color: $green;
 		}
 	}
 	@include r(480) {
