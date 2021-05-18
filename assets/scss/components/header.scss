@@ -68,6 +68,9 @@ header#site-header {
 					@include r(768) {
 						display: block;
 					}
+					.sub-menu {
+						font-family: lato, sans-serif;
+					}
 				}
 
 				.sub-menu {
@@ -179,7 +182,7 @@ header#site-header {
 #nav-toggle {
 	position: fixed;
 	right: $gap/2;
-	top: 34px;
+	top: 32px;
 	width: 28px;
 	height: 17px;
 	display: block;

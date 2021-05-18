@@ -129,6 +129,7 @@ header#site-header .header-inner{height:160px;padding:30px 40px 15px;position:re
 header#site-header .header-inner .logo{position:absolute;left:40px;top:30px;z-index:10}
 header#site-header .header-inner nav{display:inline-block;position:absolute;left:40px;bottom:15px;font-size:28px}
 header#site-header .header-inner nav ul.menu:nth-child(2){display:none}
+header#site-header .header-inner nav ul.menu:nth-child(2) .sub-menu{font-family:lato,sans-serif}
 header#site-header .header-inner nav ul.menu .sub-menu{display:none;margin-top:7px;width:100%}
 header#site-header .header-inner nav ul.menu .sub-menu li{border-top:1px solid #000;padding-top:2px;margin-bottom:7px;width:100%}
 header#site-header .header-inner nav ul.menu .sub-menu li:last-child{border-bottom:1px solid #000;padding-bottom:7px;margin-bottom:0}
@@ -142,7 +143,7 @@ header#site-header .header-inner .alt-logo{position:absolute;top:30px;right:260p
 header#site-header .header-inner .alt-logo svg{height:100%;width:auto}
 header#site-header .header-inner .contact-icons{position:absolute;bottom:15px;right:40px;float:right}
 header#site-header .header-inner .contact-icons li{display:inline-block;margin-left:15px}
-#nav-toggle{position:fixed;right:20px;top:34px;width:28px;height:17px;display:block;z-index:10;cursor:pointer;display:none}
+#nav-toggle{position:fixed;right:20px;top:32px;width:28px;height:17px;display:block;z-index:10;cursor:pointer;display:none}
 #nav-toggle span{margin-top:7px}
 #nav-toggle span,#nav-toggle span:before,#nav-toggle span:after{cursor:pointer;height:2px;width:28px;border-radius:1px;background:#000;position:absolute;display:block;content:""}
 #nav-toggle span:before{top:-8px}
@@ -265,7 +266,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .swiper-text{font-family:"GravurLLWeb-CondRegular",serif;color:#fff;padding:40px;position:absolute;left:0;bottom:30px;width:100%;font-size:28px;line-height:1.2}
 .swiper-text h2{font-weight:normal;font-size:28px}
 .swiper-text p{margin-top:22px;margin-bottom:0}
-.block-slider .slider-text-mobile{display:none;padding:20px 20px 0;font-weight:400;font-size:29px;font-family:"GravurLLWeb-CondRegular",serif}
+.block-slider .slider-text-mobile{display:none;padding:20px 20px 0;font-weight:400;font-size:29px;line-height:1.2;font-family:"GravurLLWeb-CondRegular",serif}
 .team-members>img{width:100% !important;max-width:100% !important;margin-bottom:8px}
 .team-members .team-wrapper{max-width:calc(100% + 16px) !important;width:calc(100% + 16px);margin-left:-8px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-transition:all .3s linear;transition:all .3s linear}
 .team-members .team-wrapper .sizer{width:33.33%}
@@ -322,7 +323,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-wrapper{max-width:100% !important;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .projekte .projekte-wrapper .projekt{width:25%;padding-top:206px;position:relative;cursor:pointer}
 .projekte .projekte-wrapper .projekt .to-the-top{display:none;text-align:center;width:100%}
-.projekte .projekte-wrapper .projekt .to-the-top svg{margin:12px auto 0;cursor:pointer}
+.projekte .projekte-wrapper .projekt .to-the-top svg{margin:12px auto 0;cursor:pointer;width:30px}
 .projekte .projekte-wrapper .projekt.active-projekt{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-top:8px;cursor:default}
 .projekte .projekte-wrapper .projekt.active-projekt .to-the-top{display:block}
 .projekte .projekte-wrapper .projekt.active-projekt .close{display:block;top:15px;right:15px}
@@ -346,7 +347,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte #projekte-current-cat{margin-left:8px;display:inline-block;opacity:0}
 .projekte #projekte-current-cat.active-filter{opacity:1}
 .close{width:20px;height:20px;background:url("../images/mobile-nav-close.svg") center center/contain no-repeat;position:absolute;right:15px;top:15px;cursor:pointer;display:block}
-.page-template-template-projekte #mobile-team-title{padding:0 7px}
+.page-template-template-projekte #mobile-team-title{padding:0 7px;text-transform:uppercase}
 .page-template-template-projekte #mobile-team-title+.projekte-nav{padding-top:7px}
 body{font-family:lato,sans-serif;opacity:1}
 body>.wrapper,body>header#site-header,footer#site-footer body>.section-inner{padding-top:0}
@@ -354,7 +355,8 @@ body>.wrapper,body>header#site-header,footer#site-footer body>.section-inner{pad
 header+div{min-height:50vh}
 h2,h3,h4,h5,h6{font-size:18px;font-weight:600}
 b,strong{font-weight:600}
-p{margin-bottom:12px}
+p{margin-bottom:6px}
+p+h2{padding-top:6px}
 p:last-child{margin-bottom:0}
 li.current_page_item a{color:#437a29}
 #mobile-team-title{display:none}
@@ -414,13 +416,14 @@ footer#site-footer .section-inner .text-widget.twl h3{margin-top:0}
 .projekte.text-view .projekte-wrapper .projekt{overflow-y:hidden}
 .projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:calc(100% - 16px);height:207px}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{width:100%;padding-top:16px;padding-left:8px}
+.projekte .projekte-nav #projekte-cats{top:7px}
 .projekte .projekte-wrapper .projekt{width:100%;padding-top:223px}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-slider{width:100%;height:223px}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-meta{width:100%;position:relative}
 .close{top:17px;right:20px}
 body{padding-top:80px}
 .wrapper,header#site-header,footer#site-footer .section-inner{padding:20px}
-p{margin-bottom:18px}
+p{margin-bottom:9px}
 .content h1,.content p{font-weight:100}
 .content h1{text-transform:uppercase}
 aside#site-sidebar{display:none}
@@ -435,9 +438,11 @@ body:not(.home) #the-content{width:100%;padding-left:0}
 .team-members .team-wrapper .team-member{padding:4px}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .close{top:15px;right:15px}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{padding-top:20px}
+.projekte .projekte-nav #projekte-cats{top:4px;left:8px}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-meta .projekt-category{margin-top:12px;position:relative;bottom:auto;left:auto}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-info{display:none}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-category{display:none}
+#grid-view,#text-view{display:none}
 #mobile-team-title{display:block}
 .content h1,.content p{font-weight:100}
 .content h1{text-transform:uppercase}

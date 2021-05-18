@@ -89,6 +89,14 @@
 			z-index: 2;
 			background-color: $alphaGreen;
 			display: none;
+			@include r(480) {
+				top: 4px;
+				left: 8px;
+			}
+
+			@include r(768) {
+				top: 7px;
+			}
 
 			ul {
 				list-style: none;
@@ -170,6 +178,7 @@
 				svg {
 					margin: 12px auto 0;
 					cursor: pointer;
+					width: 30px;
 				}
 			}
 
@@ -348,9 +357,17 @@
 .page-template-template-projekte {
 	#mobile-team-title {
 		padding: 0 7px;
+		text-transform: uppercase;
 
 		& + .projekte-nav {
 			padding-top: 7px;
 		}
+	}
+}
+
+#grid-view,
+#text-view {
+	@include r(480) {
+		display: none;
 	}
 }

@@ -641,6 +641,7 @@ button.swiper-pagination-bullet {
 		padding: $gap/2 $gap/2 0;
 		font-weight: 400;
 		font-size: 29px;
+		line-height: 1.2;
 		font-family: "GravurLLWeb-CondRegular", serif;
 
 		@include r(768) {

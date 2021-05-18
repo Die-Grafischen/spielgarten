@@ -43,10 +43,14 @@ strong {
 }
 
 p {
-	margin-bottom: 12px;
+	margin-bottom: 6px;
 	@include r(768) {
-		margin-bottom: 18px;
+		margin-bottom: 9px;
 	}
+}
+
+p + h2 {
+	padding-top: 6px;
 }
 
 p:last-child {
