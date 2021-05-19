@@ -391,7 +391,7 @@ header#site-header .header-inner .logo{top:25px;left:20px}
 header#site-header .header-inner nav{position:fixed;left:-200%;top:0;width:100%;height:100%;background:#fff;z-index:8;padding:0 20px 0;-webkit-transition:all .6s ease-in-out;transition:all .6s ease-in-out;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 header#site-header .header-inner nav ul.menu{margin-top:80px;display:none}
 header#site-header .header-inner nav ul.menu:nth-child(2){display:block}
-header#site-header .header-inner nav ul.menu li{width:200px;margin:0 0 12px;float:none}
+header#site-header .header-inner nav ul.menu li{width:100%;margin:0 0 12px;float:none}
 header#site-header .header-inner nav ul.menu li a{font-size:28px}
 header#site-header .header-inner .alt-logo{display:none}
 header#site-header .header-inner #sub-title{display:none}
@@ -433,6 +433,7 @@ body:not(.home) #the-content{width:100%;padding-left:0}
 .swiper-button-prev,.swiper-button-next{display:none}
 .swiper-pagination{display:none}
 .swiper-text{bottom:0}
+.swiper-text h2#sub-title{font-size:25px}
 .team-members>img{margin-bottom:4px}
 .team-members .team-wrapper{max-width:calc(100% + 8px) !important;width:calc(100% + 8px);margin-left:-4px}
 .team-members .team-wrapper .team-member{padding:4px}

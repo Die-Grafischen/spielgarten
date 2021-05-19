@@ -627,6 +627,9 @@ button.swiper-pagination-bullet {
 		@include r(768) {
 			font-size: 36px;
 		}
+		@include r(480) {
+			font-size: 25px;
+		}
 	}
 }
 
