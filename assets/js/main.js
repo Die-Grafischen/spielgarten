@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
   }
 
   if (screen.width < 600 && $(".projekte").length) {
-    $(".projekte").addClass(".text-view");
+    $(".projekte").addClass("text-view");
   } // slider homepage
 
 
