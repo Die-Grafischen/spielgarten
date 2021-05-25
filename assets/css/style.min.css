@@ -307,7 +307,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-nav>svg.active-icon path{fill:#000}
 .projekte .projekte-nav.cat-view #projekte-cats{display:block}
 .projekte .projekte-nav #projekte-current-cat{color:#437a29;padding:0 5px 2px 0;height:24px;line-height:1px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.projekte .projekte-nav #projekte-cats{position:absolute;top:24px;left:59px;padding:8px 16px;z-index:2;background-color:#f1f4eb;display:none}
+.projekte .projekte-nav #projekte-cats{position:absolute;top:9px;left:59px;padding:8px 16px;z-index:2;background-color:#f1f4eb;display:none}
 .projekte .projekte-nav #projekte-cats ul{list-style:none;padding-right:16px}
 .projekte .projekte-nav #projekte-cats ul li{padding-bottom:6px;color:#437a29;cursor:pointer}
 .projekte .projekte-nav #projekte-cats ul li:last-child{padding-bottom:0}
@@ -439,6 +439,7 @@ header#site-header .header-inner nav ul.menu:nth-child(2){overflow-y:auto}
 .team-members .team-wrapper .team-member{padding:4px}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .close{top:15px;right:15px}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{padding-top:20px}
+.projekte .projekte-nav #projekte-cats{left:8px}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-meta .projekt-category{margin-top:12px;position:relative;bottom:auto;left:auto}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-foto{width:calc(100% - 24px);padding-top:66.66%}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-info{display:none}

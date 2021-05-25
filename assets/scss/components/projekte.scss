@@ -83,12 +83,15 @@
 
 		#projekte-cats {
 			position: absolute;
-			top: 24px;
+			top: 9px;
 			left: 59px;
 			padding: 8px 16px;
 			z-index: 2;
 			background-color: $alphaGreen;
 			display: none;
+			@include r(480) {
+				left: 8px;
+			}
 
 			ul {
 				list-style: none;
