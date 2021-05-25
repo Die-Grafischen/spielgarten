@@ -68,6 +68,9 @@ header#site-header {
 					@include r(768) {
 						display: block;
 					}
+					@include r(480) {
+						overflow-y: auto;
+					}
 					.sub-menu {
 						font-family: lato, sans-serif;
 					}

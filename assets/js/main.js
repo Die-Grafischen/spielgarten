@@ -12,6 +12,10 @@ jQuery(document).ready(function ($) {
       event.preventDefault();
       $(this).next(".sub-menu").slideToggle();
     });
+  }
+
+  if (screen.width < 600 && $(".projekte").length) {
+    $(".projekte").addClass(".text-view");
   } // slider homepage
 
 

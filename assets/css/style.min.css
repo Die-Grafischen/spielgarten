@@ -322,7 +322,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte.single-projekt-view .projekte-nav{display:none}
 .projekte .projekte-wrapper{max-width:100% !important;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .projekte .projekte-wrapper .projekt{width:25%;padding-top:206px;position:relative;cursor:pointer}
-.projekte .projekte-wrapper .projekt .to-the-top{display:none;text-align:center;width:100%}
+.projekte .projekte-wrapper .projekt .to-the-top{display:none;text-align:center;width:100%;position:relative;z-index:1000}
 .projekte .projekte-wrapper .projekt .to-the-top svg{margin:12px auto 0;cursor:pointer;width:30px}
 .projekte .projekte-wrapper .projekt.active-projekt{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-top:8px;cursor:default}
 .projekte .projekte-wrapper .projekt.active-projekt .to-the-top{display:block}
@@ -339,7 +339,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-wrapper .projekt .projekt-slider:hover .swiper-btn{opacity:1}
 .projekte .projekte-wrapper .projekt .projekt-meta{display:none;padding-top:8px}
 .projekte .projekte-wrapper .projekt .projekt-meta .name{text-transform:uppercase;font-size:16px;line-height:1;margin-top:-2px}
-.projekte .projekte-wrapper .projekt .projekt-meta .projekt-ort{text-transform:uppercase}
+.projekte .projekte-wrapper .projekt .projekt-meta .projekt-ort{text-transform:uppercase;width:100%;display:block}
 .projekte .projekte-wrapper .projekt .projekt-meta .ort{text-transform:uppercase}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-info{padding-top:8px}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-category{color:#437a29;cursor:pointer}
@@ -364,12 +364,12 @@ li.current_page_item a{color:#437a29}
 .content h1,.content p{font-family:Lato;font-weight:100}
 .content h1{text-transform:uppercase}
 .wp-block-column:not(:first-child){margin-left:95px}
-aside#site-sidebar{width:230px;width:20%;padding-right:22px;float:left;padding-top:20px;font-size:18px}
+aside#site-sidebar{width:26%;padding-right:22px;float:left;padding-top:20px;font-size:18px}
 aside#site-sidebar ul{list-style:none;text-transform:uppercase}
 aside#site-sidebar ul li{padding:8px 0;border-bottom:1px solid rgba(68,72,66,0.3)}
 aside#site-sidebar ul li:first-child{border-top:1px solid rgba(68,72,66,0.3)}
 aside#site-sidebar ul li:first-child a:hover{color:#437a29}
-body:not(.home) #the-content{width:80%;padding-left:22px;padding-top:13px;float:left}
+body:not(.home) #the-content{width:74%;padding-left:22px;padding-top:13px;float:left}
 body:not(.home) #the-content.team-members{max-width:100%}
 body:not(.home) #the-content>*{max-width:710px}
 body:not(.home) #the-content .wp-block-gallery{max-width:100%;margin-top:40px}
@@ -414,12 +414,11 @@ footer#site-footer .section-inner .text-widget.twl h3{margin-top:0}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .feat-img{position:relative;width:100%;padding-top:100%}
 .team-members .team-wrapper .team-member .team-member-media .team-member-info{display:none}
 .projekte.text-view .projekte-wrapper .projekt{overflow-y:hidden}
-.projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:calc(100% - 16px);height:207px}
-.projekte.text-view .projekte-wrapper .projekt .projekt-meta{width:100%;padding-top:16px;padding-left:8px}
 .projekte .projekte-nav #projekte-cats{top:7px}
-.projekte .projekte-wrapper .projekt{width:100%;padding-top:223px}
-.projekte .projekte-wrapper .projekt.active-projekt .projekt-slider{width:100%;height:223px}
+.projekte .projekte-wrapper .projekt{width:50%;padding-top:260px}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-slider{width:100%;height:447px}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-meta{width:100%;position:relative}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-meta .projekt-category{margin-top:12px;position:relative;bottom:auto;left:auto}
 .close{top:17px;right:20px}
 body{padding-top:80px}
 .wrapper,header#site-header,footer#site-footer .section-inner{padding:20px}
@@ -429,18 +428,23 @@ p{margin-bottom:9px}
 aside#site-sidebar{display:none}
 body:not(.home) #the-content{width:100%;padding-left:0}
 }@media(max-width:480px){.wp-caption .wp-caption-text,.gallery-caption{font:300 1.8rem/1.8 sans-serif}
+header#site-header .header-inner nav ul.menu:nth-child(2){overflow-y:auto}
 .logged-in #nav-toggle{display:inline-block}
 .swiper-button-prev,.swiper-button-next{display:none}
 .swiper-pagination{display:none}
 .swiper-text{bottom:0}
-.swiper-text h2#sub-title{font-size:25px}
+.swiper-text h2#sub-title{font-weight:400;font-size:29px;line-height:1.2;font-family:"GravurLLWeb-CondRegular",serif}
 .team-members>img{margin-bottom:4px}
 .team-members .team-wrapper{max-width:calc(100% + 8px) !important;width:calc(100% + 8px);margin-left:-4px}
 .team-members .team-wrapper .team-member{padding:4px}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .close{top:15px;right:15px}
+.projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:calc(100% - 16px);height:207px}
+.projekte.text-view .projekte-wrapper .projekt .projekt-meta{width:100%;padding-top:16px;padding-left:8px}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{padding-top:20px}
 .projekte .projekte-nav #projekte-cats{top:4px;left:8px}
-.projekte .projekte-wrapper .projekt.active-projekt .projekt-meta .projekt-category{margin-top:12px;position:relative;bottom:auto;left:auto}
+.projekte .projekte-wrapper .projekt{width:100%;padding-top:223px}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-slider{height:223px}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-foto{width:calc(100% - 24px);padding-top:66.66%}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-info{display:none}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-category{display:none}
 #grid-view,#text-view{display:none}
