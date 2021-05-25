@@ -17,6 +17,10 @@ jQuery(document).ready(function ($) {
 		);
 	}
 
+	if (screen.width < 600 && $(".projekte").length) {
+		$(".projekte").addClass(".text-view");
+	}
+
 	// slider homepage
 	if ($(".home .wp-block-columns").length && screen.width < 600) {
 		$(".home .wp-block-columns p:first-of-type")

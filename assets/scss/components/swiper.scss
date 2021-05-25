@@ -628,7 +628,10 @@ button.swiper-pagination-bullet {
 			font-size: 36px;
 		}
 		@include r(480) {
-			font-size: 25px;
+			font-weight: 400;
+			font-size: 29px;
+			line-height: 1.2;
+			font-family: "GravurLLWeb-CondRegular", serif;
 		}
 	}
 }
