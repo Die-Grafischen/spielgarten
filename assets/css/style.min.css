@@ -299,6 +299,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte{max-width:calc(100% + 16px) !important;width:calc(100% + 16px) !important;margin-left:-8px;padding-left:0 !important;padding-top:0 !important}
 .projekte.text-view .projekte-wrapper .projekt{width:100%;padding-top:0;padding-bottom:16px}
 .projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:calc(25% - 16px);height:190px;position:relative;float:left}
+.projekte.text-view .projekte-wrapper .projekt .projekt-category{display:none}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{display:block;width:calc(75% - 16px);float:right}
 .projekte .projekte-nav{width:100%;padding:30px 0 4px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .projekte .projekte-nav>svg{margin-left:8px;cursor:pointer;height:18px;width:auto}
@@ -324,6 +325,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-wrapper .projekt{width:25%;padding-top:206px;position:relative;cursor:pointer}
 .projekte .projekte-wrapper .projekt .to-the-top{display:none;text-align:center;width:100%}
 .projekte .projekte-wrapper .projekt .to-the-top svg{margin:12px auto 0;cursor:pointer}
+.projekte .projekte-wrapper .projekt .projekt-ort{width:100%;display:block}
 .projekte .projekte-wrapper .projekt.active-projekt{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-top:8px;cursor:default}
 .projekte .projekte-wrapper .projekt.active-projekt .to-the-top{display:block}
 .projekte .projekte-wrapper .projekt.active-projekt .close{display:block;top:15px;right:15px}
@@ -331,7 +333,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-slider .swiper-wrapper,.projekte .projekte-wrapper .projekt.active-projekt .projekt-slider .swiper-btn{display:none}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-meta{display:inline-block;width:calc(50% - 24px);margin:0 12px 12px;background-color:#f1f4eb;padding:15px 25px;position:relative}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-meta .name{line-height:21px;margin-top:0}
-.projekte .projekte-wrapper .projekt.active-projekt .projekt-meta .projekt-category{position:absolute;bottom:15px;left:25px;display:inline-block;margin-top:span;margin-top-color:#437a29}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-meta .projekt-category{position:absolute;bottom:15px;left:25px;display:inline-block}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-foto{display:inline-block;width:calc(50% - 24px);padding-top:36.6%;margin:12px;background-color:#f1f4eb;background-position:center center;background-repeat:no-repeat;background-size:cover}
 .projekte .projekte-wrapper .projekt .projekt-slider{position:absolute;left:8px;top:8px;width:calc(100% - 16px);height:calc(100% - 16px);background-size:cover;background-repeat:no-repeat}
 .projekte .projekte-wrapper .projekt .projekt-slider .projekt-slide{width:100%;height:100%}
@@ -339,7 +341,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 .projekte .projekte-wrapper .projekt .projekt-slider:hover .swiper-btn{opacity:1}
 .projekte .projekte-wrapper .projekt .projekt-meta{display:none;padding-top:8px}
 .projekte .projekte-wrapper .projekt .projekt-meta .name{text-transform:uppercase;font-size:16px;line-height:1;margin-top:-2px}
-.projekte .projekte-wrapper .projekt .projekt-meta .projekt-ort{text-transform:uppercase}
+.projekte .projekte-wrapper .projekt .projekt-meta .projekt-ort{text-transform:uppercase;display:block;width:100%}
 .projekte .projekte-wrapper .projekt .projekt-meta .ort{text-transform:uppercase}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-info{padding-top:8px}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-category{color:#437a29;cursor:pointer}
@@ -416,9 +418,10 @@ footer#site-footer .section-inner .text-widget.twl h3{margin-top:0}
 .projekte.text-view .projekte-wrapper .projekt{overflow-y:hidden}
 .projekte.text-view .projekte-wrapper .projekt .projekt-slider{width:calc(100% - 16px);height:207px}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{width:100%;padding-top:16px;padding-left:8px}
-.projekte .projekte-wrapper .projekt{width:100%;padding-top:223px}
-.projekte .projekte-wrapper .projekt.active-projekt .projekt-slider{width:100%;height:223px}
+.projekte .projekte-wrapper .projekt{width:50%;padding-top:250px}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-slider{width:100%;height:500px}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-meta{width:100%;position:relative}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-meta .projekt-category{margin-top:12px;position:relative;bottom:auto;left:auto}
 .close{top:17px;right:20px}
 body{padding-top:80px}
 .wrapper,header#site-header,footer#site-footer .section-inner{padding:20px}
@@ -440,7 +443,9 @@ header#site-header .header-inner nav ul.menu:nth-child(2){overflow-y:auto}
 .team-members .team-wrapper .team-member.active-member .team-member-feat .team-member-info .close{top:15px;right:15px}
 .projekte.text-view .projekte-wrapper .projekt .projekt-meta{padding-top:20px}
 .projekte .projekte-nav #projekte-cats{left:8px}
-.projekte .projekte-wrapper .projekt.active-projekt .projekt-meta .projekt-category{margin-top:12px;position:relative;bottom:auto;left:auto}
+.projekte .projekte-wrapper .projekt{width:100%;padding-top:223px}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-slider{width:100%;height:223px}
+.projekte .projekte-wrapper .projekt.active-projekt .projekt-meta{padding-left:16px;padding-top:16px}
 .projekte .projekte-wrapper .projekt.active-projekt .projekt-foto{width:calc(100% - 24px);padding-top:66.66%}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-info{display:none}
 .projekte .projekte-wrapper .projekt .projekt-meta .projekt-category{display:none}
